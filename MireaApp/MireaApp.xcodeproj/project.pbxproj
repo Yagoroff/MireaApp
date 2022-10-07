@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63BB0EBB28F0385A001249B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB0EBA28F0385A001249B8 /* AppDelegate.swift */; };
+		63BB0EBD28F0385A001249B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB0EBC28F0385A001249B8 /* SceneDelegate.swift */; };
+		63BB0EBF28F0385A001249B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB0EBE28F0385A001249B8 /* ViewController.swift */; };
+		63BB0EC228F0385A001249B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63BB0EC028F0385A001249B8 /* Main.storyboard */; };
+		63BB0EC428F0385B001249B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63BB0EC328F0385B001249B8 /* Assets.xcassets */; };
+		63BB0EC728F0385B001249B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63BB0EC528F0385B001249B8 /* LaunchScreen.storyboard */; };
+		63BB0ED228F0385B001249B8 /* MireaAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB0ED128F0385B001249B8 /* MireaAppTests.swift */; };
+		63BB0EDC28F0385B001249B8 /* MireaAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB0EDB28F0385B001249B8 /* MireaAppUITests.swift */; };
+		63BB0EDE28F0385B001249B8 /* MireaAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB0EDD28F0385B001249B8 /* MireaAppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		63BB0ECE28F0385B001249B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63BB0EAF28F0385A001249B8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63BB0EB628F0385A001249B8;
+			remoteInfo = MireaApp;
+		};
+		63BB0ED828F0385B001249B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63BB0EAF28F0385A001249B8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63BB0EB628F0385A001249B8;
+			remoteInfo = MireaApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		63BB0EB728F0385A001249B8 /* MireaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MireaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63BB0EBA28F0385A001249B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		63BB0EBC28F0385A001249B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		63BB0EBE28F0385A001249B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		63BB0EC128F0385A001249B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		63BB0EC328F0385B001249B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		63BB0EC628F0385B001249B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		63BB0EC828F0385B001249B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63BB0ECD28F0385B001249B8 /* MireaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MireaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		63BB0ED128F0385B001249B8 /* MireaAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MireaAppTests.swift; sourceTree = "<group>"; };
+		63BB0ED728F0385B001249B8 /* MireaAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MireaAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		63BB0EDB28F0385B001249B8 /* MireaAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MireaAppUITests.swift; sourceTree = "<group>"; };
+		63BB0EDD28F0385B001249B8 /* MireaAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MireaAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63BB0EB428F0385A001249B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63BB0ECA28F0385B001249B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63BB0ED428F0385B001249B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63BB0EAE28F0385A001249B8 = {
+			isa = PBXGroup;
+			children = (
+				63BB0EB928F0385A001249B8 /* MireaApp */,
+				63BB0ED028F0385B001249B8 /* MireaAppTests */,
+				63BB0EDA28F0385B001249B8 /* MireaAppUITests */,
+				63BB0EB828F0385A001249B8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		63BB0EB828F0385A001249B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63BB0EB728F0385A001249B8 /* MireaApp.app */,
+				63BB0ECD28F0385B001249B8 /* MireaAppTests.xctest */,
+				63BB0ED728F0385B001249B8 /* MireaAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63BB0EB928F0385A001249B8 /* MireaApp */ = {
+			isa = PBXGroup;
+			children = (
+				63BB0EBA28F0385A001249B8 /* AppDelegate.swift */,
+				63BB0EBC28F0385A001249B8 /* SceneDelegate.swift */,
+				63BB0EBE28F0385A001249B8 /* ViewController.swift */,
+				63BB0EC028F0385A001249B8 /* Main.storyboard */,
+				63BB0EC328F0385B001249B8 /* Assets.xcassets */,
+				63BB0EC528F0385B001249B8 /* LaunchScreen.storyboard */,
+				63BB0EC828F0385B001249B8 /* Info.plist */,
+			);
+			path = MireaApp;
+			sourceTree = "<group>";
+		};
+		63BB0ED028F0385B001249B8 /* MireaAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				63BB0ED128F0385B001249B8 /* MireaAppTests.swift */,
+			);
+			path = MireaAppTests;
+			sourceTree = "<group>";
+		};
+		63BB0EDA28F0385B001249B8 /* MireaAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				63BB0EDB28F0385B001249B8 /* MireaAppUITests.swift */,
+				63BB0EDD28F0385B001249B8 /* MireaAppUITestsLaunchTests.swift */,
+			);
+			path = MireaAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63BB0EB628F0385A001249B8 /* MireaApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63BB0EE128F0385B001249B8 /* Build configuration list for PBXNativeTarget "MireaApp" */;
+			buildPhases = (
+				63BB0EB328F0385A001249B8 /* Sources */,
+				63BB0EB428F0385A001249B8 /* Frameworks */,
+				63BB0EB528F0385A001249B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MireaApp;
+			productName = MireaApp;
+			productReference = 63BB0EB728F0385A001249B8 /* MireaApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		63BB0ECC28F0385B001249B8 /* MireaAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63BB0EE428F0385B001249B8 /* Build configuration list for PBXNativeTarget "MireaAppTests" */;
+			buildPhases = (
+				63BB0EC928F0385B001249B8 /* Sources */,
+				63BB0ECA28F0385B001249B8 /* Frameworks */,
+				63BB0ECB28F0385B001249B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63BB0ECF28F0385B001249B8 /* PBXTargetDependency */,
+			);
+			name = MireaAppTests;
+			productName = MireaAppTests;
+			productReference = 63BB0ECD28F0385B001249B8 /* MireaAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		63BB0ED628F0385B001249B8 /* MireaAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63BB0EE728F0385B001249B8 /* Build configuration list for PBXNativeTarget "MireaAppUITests" */;
+			buildPhases = (
+				63BB0ED328F0385B001249B8 /* Sources */,
+				63BB0ED428F0385B001249B8 /* Frameworks */,
+				63BB0ED528F0385B001249B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63BB0ED928F0385B001249B8 /* PBXTargetDependency */,
+			);
+			name = MireaAppUITests;
+			productName = MireaAppUITests;
+			productReference = 63BB0ED728F0385B001249B8 /* MireaAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63BB0EAF28F0385A001249B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					63BB0EB628F0385A001249B8 = {
+						CreatedOnToolsVersion = 13.4;
+					};
+					63BB0ECC28F0385B001249B8 = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = 63BB0EB628F0385A001249B8;
+					};
+					63BB0ED628F0385B001249B8 = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = 63BB0EB628F0385A001249B8;
+					};
+				};
+			};
+			buildConfigurationList = 63BB0EB228F0385A001249B8 /* Build configuration list for PBXProject "MireaApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 63BB0EAE28F0385A001249B8;
+			productRefGroup = 63BB0EB828F0385A001249B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63BB0EB628F0385A001249B8 /* MireaApp */,
+				63BB0ECC28F0385B001249B8 /* MireaAppTests */,
+				63BB0ED628F0385B001249B8 /* MireaAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63BB0EB528F0385A001249B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63BB0EC728F0385B001249B8 /* LaunchScreen.storyboard in Resources */,
+				63BB0EC428F0385B001249B8 /* Assets.xcassets in Resources */,
+				63BB0EC228F0385A001249B8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63BB0ECB28F0385B001249B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63BB0ED528F0385B001249B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63BB0EB328F0385A001249B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63BB0EBF28F0385A001249B8 /* ViewController.swift in Sources */,
+				63BB0EBB28F0385A001249B8 /* AppDelegate.swift in Sources */,
+				63BB0EBD28F0385A001249B8 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63BB0EC928F0385B001249B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63BB0ED228F0385B001249B8 /* MireaAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63BB0ED328F0385B001249B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63BB0EDE28F0385B001249B8 /* MireaAppUITestsLaunchTests.swift in Sources */,
+				63BB0EDC28F0385B001249B8 /* MireaAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		63BB0ECF28F0385B001249B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63BB0EB628F0385A001249B8 /* MireaApp */;
+			targetProxy = 63BB0ECE28F0385B001249B8 /* PBXContainerItemProxy */;
+		};
+		63BB0ED928F0385B001249B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63BB0EB628F0385A001249B8 /* MireaApp */;
+			targetProxy = 63BB0ED828F0385B001249B8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		63BB0EC028F0385A001249B8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63BB0EC128F0385A001249B8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		63BB0EC528F0385B001249B8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63BB0EC628F0385B001249B8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		63BB0EDF28F0385B001249B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		63BB0EE028F0385B001249B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63BB0EE228F0385B001249B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z37YAWUCP4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MireaApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.yagoroff.MireaApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		63BB0EE328F0385B001249B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z37YAWUCP4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MireaApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.yagoroff.MireaApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		63BB0EE528F0385B001249B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z37YAWUCP4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.yagoroff.MireaAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MireaApp.app/MireaApp";
+			};
+			name = Debug;
+		};
+		63BB0EE628F0385B001249B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z37YAWUCP4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.yagoroff.MireaAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MireaApp.app/MireaApp";
+			};
+			name = Release;
+		};
+		63BB0EE828F0385B001249B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z37YAWUCP4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.yagoroff.MireaAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MireaApp;
+			};
+			name = Debug;
+		};
+		63BB0EE928F0385B001249B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z37YAWUCP4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.yagoroff.MireaAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MireaApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63BB0EB228F0385A001249B8 /* Build configuration list for PBXProject "MireaApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63BB0EDF28F0385B001249B8 /* Debug */,
+				63BB0EE028F0385B001249B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63BB0EE128F0385B001249B8 /* Build configuration list for PBXNativeTarget "MireaApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63BB0EE228F0385B001249B8 /* Debug */,
+				63BB0EE328F0385B001249B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63BB0EE428F0385B001249B8 /* Build configuration list for PBXNativeTarget "MireaAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63BB0EE528F0385B001249B8 /* Debug */,
+				63BB0EE628F0385B001249B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63BB0EE728F0385B001249B8 /* Build configuration list for PBXNativeTarget "MireaAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63BB0EE828F0385B001249B8 /* Debug */,
+				63BB0EE928F0385B001249B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63BB0EAF28F0385A001249B8 /* Project object */;
+}
