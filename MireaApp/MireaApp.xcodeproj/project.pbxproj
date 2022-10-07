@@ -10,7 +10,6 @@
 		63BB0EBB28F0385A001249B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB0EBA28F0385A001249B8 /* AppDelegate.swift */; };
 		63BB0EBD28F0385A001249B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB0EBC28F0385A001249B8 /* SceneDelegate.swift */; };
 		63BB0EBF28F0385A001249B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB0EBE28F0385A001249B8 /* ViewController.swift */; };
-		63BB0EC228F0385A001249B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63BB0EC028F0385A001249B8 /* Main.storyboard */; };
 		63BB0EC428F0385B001249B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63BB0EC328F0385B001249B8 /* Assets.xcassets */; };
 		63BB0EC728F0385B001249B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63BB0EC528F0385B001249B8 /* LaunchScreen.storyboard */; };
 		63BB0ED228F0385B001249B8 /* MireaAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB0ED128F0385B001249B8 /* MireaAppTests.swift */; };
@@ -40,7 +39,6 @@
 		63BB0EBA28F0385A001249B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63BB0EBC28F0385A001249B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		63BB0EBE28F0385A001249B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		63BB0EC128F0385A001249B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63BB0EC328F0385B001249B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63BB0EC628F0385B001249B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63BB0EC828F0385B001249B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				63BB0EBA28F0385A001249B8 /* AppDelegate.swift */,
 				63BB0EBC28F0385A001249B8 /* SceneDelegate.swift */,
 				63BB0EBE28F0385A001249B8 /* ViewController.swift */,
-				63BB0EC028F0385A001249B8 /* Main.storyboard */,
 				63BB0EC328F0385B001249B8 /* Assets.xcassets */,
 				63BB0EC528F0385B001249B8 /* LaunchScreen.storyboard */,
 				63BB0EC828F0385B001249B8 /* Info.plist */,
@@ -233,7 +230,6 @@
 			files = (
 				63BB0EC728F0385B001249B8 /* LaunchScreen.storyboard in Resources */,
 				63BB0EC428F0385B001249B8 /* Assets.xcassets in Resources */,
-				63BB0EC228F0385A001249B8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +293,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		63BB0EC028F0385A001249B8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				63BB0EC128F0385A001249B8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		63BB0EC528F0385B001249B8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +430,7 @@
 				INFOPLIST_FILE = MireaApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +458,7 @@
 				INFOPLIST_FILE = MireaApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
