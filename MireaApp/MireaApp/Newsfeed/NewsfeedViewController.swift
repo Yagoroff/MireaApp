@@ -19,11 +19,20 @@ class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic {
     
     private var feedViewModel = FeedViewModel.init(cells: [])
     
+    private var pageCount = 0
+            
     let tableView: UITableView = {
         let table = UITableView(frame: .zero)
+        table.translatesAutoresizingMaskIntoConstraints = false
         table.register(NewsfeedCell.self, forCellReuseIdentifier: NewsfeedCell.reuseId)
         return table
-    }()
+    } ()
+    
+    private var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        return refreshControl
+    } ()
 
   // MARK: Object lifecycle
   
@@ -51,32 +60,46 @@ class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic {
     router.viewController     = viewController
   }
   
-  // MARK: Routing
-  
-
-  
   // MARK: View lifecycle
-  
+    func setTableView() {
+        tableView.addSubview(refreshControl)
+        view.addSubview(tableView)
+        tableView.delegate = self
+        tableView.dataSource = self
+        let headerView = NewsHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 50))
+        tableView.tableHeaderView = headerView
+    }
+    
   override func viewDidLoad() {
     super.viewDidLoad()
-      view.addSubview(tableView)
-      tableView.delegate = self
-      tableView.dataSource = self
-      interactor?.makeRequest(request: .getNewsFeed)
+      setTableView()
+      interactor?.makeRequest(request: .getNewsFeed(page: pageCount))
+      NSLayoutConstraint.activate([
+        tableView.topAnchor.constraint(equalTo: view.topAnchor),
+        tableView.widthAnchor.constraint(equalTo: view.widthAnchor),
+        tableView.heightAnchor.constraint(equalTo: view.heightAnchor),
+      ])
   }
-    
-    override func viewDidLayoutSubviews() {
-        tableView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
-    }
   
   func displayData(viewModel: Newsfeed.Model.ViewModel.ViewModelData) {
       switch viewModel {
           
       case .displayNewsFeed(feedViewModel: let feedViewModel):
-          self.feedViewModel = feedViewModel
+          self.feedViewModel.cells += feedViewModel.cells
           tableView.reloadData()
+          refreshControl.endRefreshing()
+//          self.feedViewModel.cells.map { cell in
+//              print(cell.id)
+//          }
       }
-  }  
+  }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if scrollView.contentOffset.y > scrollView.contentSize.height / 1.4 {
+            pageCount += 1
+            interactor?.makeRequest(request: Newsfeed.Model.Request.RequestType.getNewsFeed(page: pageCount))
+        }
+    }
 }
 
 extension NewsfeedViewController: UITableViewDelegate, UITableViewDataSource {
@@ -92,6 +115,12 @@ extension NewsfeedViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 400
+        return UIScreen.main.bounds.height/1.8
+    }
+}
+
+extension NewsfeedViewController {
+    @objc private func refresh() {
+        interactor?.makeRequest(request: Newsfeed.Model.Request.RequestType.getNewsFeed(page: pageCount))
     }
 }

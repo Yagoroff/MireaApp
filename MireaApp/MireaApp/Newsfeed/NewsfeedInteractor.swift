@@ -26,8 +26,10 @@ class NewsfeedInteractor: NewsfeedBusinessLogic {
       
       switch request {
           
-      case .getNewsFeed:
-          networkService.request(path: API.news, params: ["limit":"20"]) { data, error in
+      case .getNewsFeed(page: let page):
+          var params = ["limit": "5"]
+          params["page"] = String(page)
+          networkService.request(path: API.news, params: params) { data, error in
               if let error = error {
                   print(error.localizedDescription)
               }
@@ -37,7 +39,7 @@ class NewsfeedInteractor: NewsfeedBusinessLogic {
               let response = try? decoder.decode(NewsResponse.self, from: data)
               self.presenter?.presentData(response: Newsfeed.Model.Response.ResponseType.presentNewsFeed(feed: response!))
               }
-          }
+      }
       }
       
   }

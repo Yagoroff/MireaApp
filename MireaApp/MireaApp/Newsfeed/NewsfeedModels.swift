@@ -13,7 +13,7 @@ enum Newsfeed {
   enum Model {
     struct Request {
       enum RequestType {
-        case getNewsFeed
+          case getNewsFeed(page: Int)
       }
     }
     struct Response {
@@ -36,5 +36,5 @@ struct FeedViewModel {
         var image: String?
     }
     
-    let cells: [Cell]
+    var cells: [Cell]
 }

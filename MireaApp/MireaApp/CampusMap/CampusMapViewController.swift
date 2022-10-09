@@ -67,8 +67,7 @@ class CampusMapViewController: UIViewController, CampusMapDisplayLogic {
 
 extension CampusMapViewController {
     private func loadRequest() {
-        guard let url = URL(string: "https://google.com") else {return}
-//    https://ischemes.ru/group/rtu-mirea/vern78
+        guard let url = URL(string: "https://ischemes.ru/group/rtu-mirea/vern78") else {return}
         let urlRequest = URLRequest(url: url)
         webMapView.load(urlRequest)
     }
