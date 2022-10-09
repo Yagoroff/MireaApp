@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		63BB0EBB28F0385A001249B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB0EBA28F0385A001249B8 /* AppDelegate.swift */; };
 		63BB0EBD28F0385A001249B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB0EBC28F0385A001249B8 /* SceneDelegate.swift */; };
-		63BB0EBF28F0385A001249B8 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB0EBE28F0385A001249B8 /* NewsViewController.swift */; };
 		63BB0EC428F0385B001249B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63BB0EC328F0385B001249B8 /* Assets.xcassets */; };
 		63BB0EC728F0385B001249B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63BB0EC528F0385B001249B8 /* LaunchScreen.storyboard */; };
 		63BB0ED228F0385B001249B8 /* MireaAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB0ED128F0385B001249B8 /* MireaAppTests.swift */; };
@@ -34,6 +33,15 @@
 		63EC3E6228F0A5B40096D7A2 /* CampusMapModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC3E5B28F0A5B40096D7A2 /* CampusMapModels.swift */; };
 		63EC3E6328F0A5B40096D7A2 /* CampusMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC3E5C28F0A5B40096D7A2 /* CampusMapViewController.swift */; };
 		63EC3E6428F0A5B40096D7A2 /* CampusMapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC3E5D28F0A5B40096D7A2 /* CampusMapInteractor.swift */; };
+		63EC3E6E28F0AB490096D7A2 /* SchedulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC3E6728F0AB490096D7A2 /* SchedulePresenter.swift */; };
+		63EC3E6F28F0AB490096D7A2 /* ScheduleWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC3E6828F0AB490096D7A2 /* ScheduleWorker.swift */; };
+		63EC3E7028F0AB490096D7A2 /* ScheduleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC3E6928F0AB490096D7A2 /* ScheduleRouter.swift */; };
+		63EC3E7128F0AB490096D7A2 /* ScheduleModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC3E6A28F0AB490096D7A2 /* ScheduleModels.swift */; };
+		63EC3E7228F0AB490096D7A2 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC3E6B28F0AB490096D7A2 /* ScheduleViewController.swift */; };
+		63EC3E7328F0AB490096D7A2 /* ScheduleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC3E6C28F0AB490096D7A2 /* ScheduleInteractor.swift */; };
+		63EC3E7628F0ABE50096D7A2 /* ScheduleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC3E7528F0ABE50096D7A2 /* ScheduleResponse.swift */; };
+		63EC3E7928F18ED80096D7A2 /* ExtenstionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC3E7828F18ED80096D7A2 /* ExtenstionUIColor.swift */; };
+		63EC3E7C28F1C62C0096D7A2 /* NewsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC3E7B28F1C62C0096D7A2 /* NewsHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +65,6 @@
 		63BB0EB728F0385A001249B8 /* MireaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MireaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63BB0EBA28F0385A001249B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63BB0EBC28F0385A001249B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		63BB0EBE28F0385A001249B8 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		63BB0EC328F0385B001249B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63BB0EC628F0385B001249B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63BB0EC828F0385B001249B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +90,15 @@
 		63EC3E5B28F0A5B40096D7A2 /* CampusMapModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusMapModels.swift; sourceTree = "<group>"; };
 		63EC3E5C28F0A5B40096D7A2 /* CampusMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusMapViewController.swift; sourceTree = "<group>"; };
 		63EC3E5D28F0A5B40096D7A2 /* CampusMapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusMapInteractor.swift; sourceTree = "<group>"; };
+		63EC3E6728F0AB490096D7A2 /* SchedulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulePresenter.swift; sourceTree = "<group>"; };
+		63EC3E6828F0AB490096D7A2 /* ScheduleWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleWorker.swift; sourceTree = "<group>"; };
+		63EC3E6928F0AB490096D7A2 /* ScheduleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRouter.swift; sourceTree = "<group>"; };
+		63EC3E6A28F0AB490096D7A2 /* ScheduleModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModels.swift; sourceTree = "<group>"; };
+		63EC3E6B28F0AB490096D7A2 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		63EC3E6C28F0AB490096D7A2 /* ScheduleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleInteractor.swift; sourceTree = "<group>"; };
+		63EC3E7528F0ABE50096D7A2 /* ScheduleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleResponse.swift; sourceTree = "<group>"; };
+		63EC3E7828F18ED80096D7A2 /* ExtenstionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtenstionUIColor.swift; sourceTree = "<group>"; };
+		63EC3E7B28F1C62C0096D7A2 /* NewsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,13 +151,14 @@
 		63BB0EB928F0385A001249B8 /* MireaApp */ = {
 			isa = PBXGroup;
 			children = (
+				63EC3E7728F18ECD0096D7A2 /* Extensions */,
+				63EC3E6628F0AB2E0096D7A2 /* Schedule */,
 				63EC3E5728F0A5880096D7A2 /* CampusMap */,
 				63EC3E3E28F0803A0096D7A2 /* Newsfeed */,
 				63BB0EEC28F04F12001249B8 /* Services */,
 				63BB0EBA28F0385A001249B8 /* AppDelegate.swift */,
 				63BB0EBC28F0385A001249B8 /* SceneDelegate.swift */,
 				63BB0EEA28F03A66001249B8 /* MainTabBarViewController.swift */,
-				63BB0EBE28F0385A001249B8 /* NewsViewController.swift */,
 				63BB0EC328F0385B001249B8 /* Assets.xcassets */,
 				63BB0EC528F0385B001249B8 /* LaunchScreen.storyboard */,
 				63BB0EC828F0385B001249B8 /* Info.plist */,
@@ -180,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				63BB0EF228F055E4001249B8 /* NewsResponse.swift */,
+				63EC3E7528F0ABE50096D7A2 /* ScheduleResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,6 +205,7 @@
 		63EC3E3E28F0803A0096D7A2 /* Newsfeed */ = {
 			isa = PBXGroup;
 			children = (
+				63EC3E7A28F1C5D60096D7A2 /* Views */,
 				63EC3E4D28F0830F0096D7A2 /* Cell */,
 				63EC3E3F28F0804E0096D7A2 /* NewsfeedPresenter.swift */,
 				63EC3E4028F0804E0096D7A2 /* NewsfeedWorker.swift */,
@@ -217,6 +236,35 @@
 				63EC3E5D28F0A5B40096D7A2 /* CampusMapInteractor.swift */,
 			);
 			path = CampusMap;
+			sourceTree = "<group>";
+		};
+		63EC3E6628F0AB2E0096D7A2 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				63EC3E6728F0AB490096D7A2 /* SchedulePresenter.swift */,
+				63EC3E6828F0AB490096D7A2 /* ScheduleWorker.swift */,
+				63EC3E6928F0AB490096D7A2 /* ScheduleRouter.swift */,
+				63EC3E6A28F0AB490096D7A2 /* ScheduleModels.swift */,
+				63EC3E6B28F0AB490096D7A2 /* ScheduleViewController.swift */,
+				63EC3E6C28F0AB490096D7A2 /* ScheduleInteractor.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		63EC3E7728F18ECD0096D7A2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				63EC3E7828F18ED80096D7A2 /* ExtenstionUIColor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		63EC3E7A28F1C5D60096D7A2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				63EC3E7B28F1C62C0096D7A2 /* NewsHeaderView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,21 +406,29 @@
 			files = (
 				63BB0EF328F055E4001249B8 /* NewsResponse.swift in Sources */,
 				63EC3E6328F0A5B40096D7A2 /* CampusMapViewController.swift in Sources */,
+				63EC3E7028F0AB490096D7A2 /* ScheduleRouter.swift in Sources */,
 				63EC3E6028F0A5B40096D7A2 /* CampusMapWorker.swift in Sources */,
 				63BB0EEE28F04F25001249B8 /* NetworkService.swift in Sources */,
 				63EC3E6228F0A5B40096D7A2 /* CampusMapModels.swift in Sources */,
-				63BB0EBF28F0385A001249B8 /* NewsViewController.swift in Sources */,
+				63EC3E7328F0AB490096D7A2 /* ScheduleInteractor.swift in Sources */,
 				63EC3E4628F0804E0096D7A2 /* NewsfeedPresenter.swift in Sources */,
+				63EC3E7928F18ED80096D7A2 /* ExtenstionUIColor.swift in Sources */,
 				63EC3E4F28F0832A0096D7A2 /* NewsfeedCell.swift in Sources */,
+				63EC3E7C28F1C62C0096D7A2 /* NewsHeaderView.swift in Sources */,
 				63EC3E4928F0804E0096D7A2 /* NewsfeedModels.swift in Sources */,
 				63EC3E5F28F0A5B40096D7A2 /* CampusMapPresenter.swift in Sources */,
+				63EC3E6E28F0AB490096D7A2 /* SchedulePresenter.swift in Sources */,
 				63BB0EEB28F03A66001249B8 /* MainTabBarViewController.swift in Sources */,
 				63BB0EBB28F0385A001249B8 /* AppDelegate.swift in Sources */,
 				63EC3E4728F0804E0096D7A2 /* NewsfeedWorker.swift in Sources */,
+				63EC3E7228F0AB490096D7A2 /* ScheduleViewController.swift in Sources */,
 				63EC3E4828F0804E0096D7A2 /* NewsfeedRouter.swift in Sources */,
+				63EC3E7128F0AB490096D7A2 /* ScheduleModels.swift in Sources */,
 				63EC3E6428F0A5B40096D7A2 /* CampusMapInteractor.swift in Sources */,
 				63EC3E4B28F0804E0096D7A2 /* NewsfeedInteractor.swift in Sources */,
 				63BB0EF028F04F30001249B8 /* API.swift in Sources */,
+				63EC3E6F28F0AB490096D7A2 /* ScheduleWorker.swift in Sources */,
+				63EC3E7628F0ABE50096D7A2 /* ScheduleResponse.swift in Sources */,
 				63BB0EBD28F0385A001249B8 /* SceneDelegate.swift in Sources */,
 				63EC3E4A28F0804E0096D7A2 /* NewsfeedViewController.swift in Sources */,
 				63EC3E6128F0A5B40096D7A2 /* CampusMapRouter.swift in Sources */,
@@ -550,6 +606,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -578,6 +635,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
