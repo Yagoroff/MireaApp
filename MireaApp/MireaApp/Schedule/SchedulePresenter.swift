@@ -50,8 +50,24 @@ class SchedulePresenter: SchedulePresentationLogic {
               }
           }
           
-          var scheduleViewModel = ScheduleViewModel.init(cellsOfEven: cellsForEvenWeeks, cellsOfOdd: cellsForOddWeeks)
+          let finalCells = cellsForEvenWeeks + cellsForOddWeeks
+          
+          let scheduleViewModel = ScheduleViewModel.init(cells: finalCells)
           viewController?.displayData(viewModel: Schedule.Model.ViewModel.ViewModelData.displaySchedule(schedule: scheduleViewModel))
+          
+      case .presentScheduleOnWeek(schedule: let schedule):
+        
+          var cells: [ScheduleWeekViewModel.Cell] = []
+          
+          for openSchedule in schedule {
+              for scheduleItem in openSchedule {
+                  cells.append(cellOfWeekViewModel(from: scheduleItem))
+              }
+            }
+          
+          
+          let scheduleWeekViewModel = ScheduleWeekViewModel.init(cells: cells)
+          viewController?.displayData(viewModel: Schedule.Model.ViewModel.ViewModelData.presentScheduleOnWeek(schedule: scheduleWeekViewModel))
       }
   }
     
@@ -66,6 +82,10 @@ class SchedulePresenter: SchedulePresentationLogic {
         }
         
         return ScheduleViewModel.Cell.init(name: String(scheduleItem.name ?? ""), number: Int(scheduleItem.number ?? 0), wdNum: Int(scheduleItem.number ?? 0), group: String(scheduleItem.group ?? ""), type: String(scheduleItem.type ?? ""), room: String(scheduleItem.room ?? ""), weeks: weeks, strWeeks: String(scheduleItem.strWeeks ?? ""))
+    }
+    
+    private func cellOfWeekViewModel(from scheduleWeekItem: ScheduleWeekItems) -> ScheduleWeekViewModel.Cell {
+        return ScheduleWeekViewModel.Cell.init(name: String(scheduleWeekItem.name ?? ""), number: Int(scheduleWeekItem.number ?? 0), wdNum: Int(scheduleWeekItem.number ?? 0), group: String(scheduleWeekItem.group ?? ""), type: String(scheduleWeekItem.type ?? ""), room: String(scheduleWeekItem.room ?? ""), week: Int(scheduleWeekItem.week ?? 0))
     }
     
     private func cellViewModel(from teachersItem: TeachersItem) -> TeachersViewModel.Cell {

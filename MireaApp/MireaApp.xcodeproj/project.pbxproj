@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6330D3F828F40B0B0051CB33 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6330D3F728F40B0B0051CB33 /* ScheduleCell.swift */; };
+		6330D3FA28F4A2A80051CB33 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6330D3F928F4A2A80051CB33 /* FooterView.swift */; };
 		63BB0EBB28F0385A001249B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB0EBA28F0385A001249B8 /* AppDelegate.swift */; };
 		63BB0EBD28F0385A001249B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB0EBC28F0385A001249B8 /* SceneDelegate.swift */; };
 		63BB0EC428F0385B001249B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63BB0EC328F0385B001249B8 /* Assets.xcassets */; };
@@ -41,7 +43,6 @@
 		63EC3E7328F0AB490096D7A2 /* ScheduleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC3E6C28F0AB490096D7A2 /* ScheduleInteractor.swift */; };
 		63EC3E7628F0ABE50096D7A2 /* ScheduleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC3E7528F0ABE50096D7A2 /* ScheduleResponse.swift */; };
 		63EC3E7928F18ED80096D7A2 /* ExtenstionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC3E7828F18ED80096D7A2 /* ExtenstionUIColor.swift */; };
-		63EC3E7C28F1C62C0096D7A2 /* NewsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC3E7B28F1C62C0096D7A2 /* NewsHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6330D3F728F40B0B0051CB33 /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
+		6330D3F928F4A2A80051CB33 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		63BB0EB728F0385A001249B8 /* MireaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MireaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63BB0EBA28F0385A001249B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63BB0EBC28F0385A001249B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,7 +101,6 @@
 		63EC3E6C28F0AB490096D7A2 /* ScheduleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleInteractor.swift; sourceTree = "<group>"; };
 		63EC3E7528F0ABE50096D7A2 /* ScheduleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleResponse.swift; sourceTree = "<group>"; };
 		63EC3E7828F18ED80096D7A2 /* ExtenstionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtenstionUIColor.swift; sourceTree = "<group>"; };
-		63EC3E7B28F1C62C0096D7A2 /* NewsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6330D3F628F40ACB0051CB33 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6330D3F728F40B0B0051CB33 /* ScheduleCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		6330D3FB28F4A2AD0051CB33 /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+				6330D3F928F4A2A80051CB33 /* FooterView.swift */,
+			);
+			path = Footer;
+			sourceTree = "<group>";
+		};
 		63BB0EAE28F0385A001249B8 = {
 			isa = PBXGroup;
 			children = (
@@ -205,7 +223,7 @@
 		63EC3E3E28F0803A0096D7A2 /* Newsfeed */ = {
 			isa = PBXGroup;
 			children = (
-				63EC3E7A28F1C5D60096D7A2 /* Views */,
+				6330D3FB28F4A2AD0051CB33 /* Footer */,
 				63EC3E4D28F0830F0096D7A2 /* Cell */,
 				63EC3E3F28F0804E0096D7A2 /* NewsfeedPresenter.swift */,
 				63EC3E4028F0804E0096D7A2 /* NewsfeedWorker.swift */,
@@ -241,6 +259,7 @@
 		63EC3E6628F0AB2E0096D7A2 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
+				6330D3F628F40ACB0051CB33 /* Cell */,
 				63EC3E6728F0AB490096D7A2 /* SchedulePresenter.swift */,
 				63EC3E6828F0AB490096D7A2 /* ScheduleWorker.swift */,
 				63EC3E6928F0AB490096D7A2 /* ScheduleRouter.swift */,
@@ -257,14 +276,6 @@
 				63EC3E7828F18ED80096D7A2 /* ExtenstionUIColor.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		63EC3E7A28F1C5D60096D7A2 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				63EC3E7B28F1C62C0096D7A2 /* NewsHeaderView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,7 +425,6 @@
 				63EC3E4628F0804E0096D7A2 /* NewsfeedPresenter.swift in Sources */,
 				63EC3E7928F18ED80096D7A2 /* ExtenstionUIColor.swift in Sources */,
 				63EC3E4F28F0832A0096D7A2 /* NewsfeedCell.swift in Sources */,
-				63EC3E7C28F1C62C0096D7A2 /* NewsHeaderView.swift in Sources */,
 				63EC3E4928F0804E0096D7A2 /* NewsfeedModels.swift in Sources */,
 				63EC3E5F28F0A5B40096D7A2 /* CampusMapPresenter.swift in Sources */,
 				63EC3E6E28F0AB490096D7A2 /* SchedulePresenter.swift in Sources */,
@@ -428,6 +438,8 @@
 				63EC3E4B28F0804E0096D7A2 /* NewsfeedInteractor.swift in Sources */,
 				63BB0EF028F04F30001249B8 /* API.swift in Sources */,
 				63EC3E6F28F0AB490096D7A2 /* ScheduleWorker.swift in Sources */,
+				6330D3F828F40B0B0051CB33 /* ScheduleCell.swift in Sources */,
+				6330D3FA28F4A2A80051CB33 /* FooterView.swift in Sources */,
 				63EC3E7628F0ABE50096D7A2 /* ScheduleResponse.swift in Sources */,
 				63BB0EBD28F0385A001249B8 /* SceneDelegate.swift in Sources */,
 				63EC3E4A28F0804E0096D7A2 /* NewsfeedViewController.swift in Sources */,

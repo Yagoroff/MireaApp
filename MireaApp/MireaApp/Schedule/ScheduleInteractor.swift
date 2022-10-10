@@ -50,6 +50,18 @@ class ScheduleInteractor: ScheduleBusinessLogic {
               let response = try? decoder.decode(ScheduleResponse.self, from: data)
               self.presenter?.presentData(response: Schedule.Model.Response.ResponseType.presentSchedule(schedule: response!))
           }
+      case .getScheduleOnWeek(teacherId: let teacherId, numberOfWeek: let numberOfWeek):
+          let fullPath = API.schedule + "/\(teacherId)/\(numberOfWeek)"
+          networkService.request(path: fullPath, params: ["":""]) { data, error in
+              if let error = error {
+                  print(error.localizedDescription)
+              }
+              
+              let decoder = JSONDecoder()
+              guard let data = data else { return }
+              let response = try? decoder.decode(ScheduleWeekResponse.self, from: data)
+              self.presenter?.presentData(response: Schedule.Model.Response.ResponseType.presentScheduleOnWeek(schedule: response!))
+          }
       }
   }
   

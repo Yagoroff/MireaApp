@@ -55,6 +55,7 @@ class CampusMapViewController: UIViewController, CampusMapDisplayLogic {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+      title = "Карта"
       view.addSubview(webMapView)
       webMapView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
       loadRequest()
@@ -67,7 +68,8 @@ class CampusMapViewController: UIViewController, CampusMapDisplayLogic {
 
 extension CampusMapViewController {
     private func loadRequest() {
-        guard let url = URL(string: "https://ischemes.ru/group/rtu-mirea/vern78") else {return}
+        guard let url = URL(string: "https://google.com") else {return}
+//        https://ischemes.ru/group/rtu-mirea/vern78
         let urlRequest = URLRequest(url: url)
         webMapView.load(urlRequest)
     }

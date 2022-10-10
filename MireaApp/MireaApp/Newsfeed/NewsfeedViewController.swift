@@ -66,12 +66,12 @@ class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic {
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
-        let headerView = NewsHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 50))
-        tableView.tableHeaderView = headerView
     }
     
   override func viewDidLoad() {
     super.viewDidLoad()
+      title = "Новости"
+      view.backgroundColor = .systemBackground
       setTableView()
       interactor?.makeRequest(request: .getNewsFeed(page: pageCount))
       NSLayoutConstraint.activate([
@@ -115,12 +115,14 @@ extension NewsfeedViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UIScreen.main.bounds.height/1.8
+        return UIScreen.main.bounds.height/2
     }
 }
 
 extension NewsfeedViewController {
     @objc private func refresh() {
+        pageCount = 0
         interactor?.makeRequest(request: Newsfeed.Model.Request.RequestType.getNewsFeed(page: pageCount))
+        feedViewModel.cells = []
     }
 }

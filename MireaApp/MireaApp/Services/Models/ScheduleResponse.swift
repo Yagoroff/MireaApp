@@ -28,3 +28,12 @@ struct ScheduleItems: Decodable {
 
 typealias ScheduleResponse = [[String: ScheduleEvenOddModel]]
 
+struct ScheduleWeekItems: Decodable {
+    let name: String?
+    let number, wdNum: Int?
+    let group, type, room: String?
+    let week: Int?
+}
+
+typealias ScheduleWeekResponse = [[ScheduleWeekItems]]
+

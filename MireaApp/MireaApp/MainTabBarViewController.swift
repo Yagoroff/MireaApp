@@ -15,18 +15,17 @@ class MainTabBarViewController: UITabBarController {
         let vc1 = UINavigationController(rootViewController: NewsfeedViewController())
         let vc2 = UINavigationController(rootViewController: CampusMapViewController())
         let vc3 = UINavigationController(rootViewController: ScheduleViewController())
-                      
-        vc1.tabBarItem.image = UIImage(systemName: "newspaper")
-        vc2.tabBarItem.image = UIImage(systemName: "map")
-        vc3.tabBarItem.image = UIImage(systemName: "calendar")
+                              
+        vc1.tabBarItem = UITabBarItem(title: "Новости", image: UIImage(systemName: "newspaper"), tag: 1)
+        vc2.tabBarItem = UITabBarItem(title: "Карта", image: UIImage(systemName: "map"), tag: 2)
+        vc3.tabBarItem = UITabBarItem(title: "Расписание", image: UIImage(systemName: "calendar"), tag: 3)
         
-        vc1.title = "Новости"
-        vc2.title = "Карта"
-        vc3.title = "Расписание"
+        vc1.navigationBar.prefersLargeTitles = true
+        vc2.navigationBar.prefersLargeTitles = true
+        vc3.navigationBar.prefersLargeTitles = true
         
-//        tabBar.tintColor = UIColor(rgb: 0x10c092)
-//        tabBar.barTintColor = UIColor(rgb: 0x223649)
-
+        tabBar.tintColor = UIColor.init(rgb: 0x574af9)
+        
         setViewControllers([vc1, vc2, vc3], animated: true)
     }
     

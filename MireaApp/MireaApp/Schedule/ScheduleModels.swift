@@ -15,18 +15,21 @@ enum Schedule {
         enum RequestType {
           case getTeachers
             case getSchedule(teacherId: Int)
+            case getScheduleOnWeek(teacherId: Int, numberOfWeek: Int)
         }
       }
       struct Response {
         enum ResponseType {
             case presentTeachers(teachers: TeachersResponse)
             case presentSchedule(schedule: ScheduleResponse)
+            case presentScheduleOnWeek(schedule: ScheduleWeekResponse)
         }
       }
       struct ViewModel {
         enum ViewModelData {
             case displayTeachers(teachersViewModel: TeachersViewModel)
             case displaySchedule(schedule: ScheduleViewModel)
+            case presentScheduleOnWeek(schedule: ScheduleWeekViewModel)
         }
     }
   }
@@ -50,6 +53,17 @@ struct ScheduleViewModel {
         let strWeeks: String?
     }
     
-    let cellsOfEven: [Cell]
-    let cellsOfOdd: [Cell]
+    let cells: [Cell]
+}
+
+struct ScheduleWeekViewModel {
+    
+    struct Cell {
+        let name: String?
+        let number, wdNum: Int?
+        let group, type, room: String?
+        let week: Int?
+    }
+    
+    let cells: [Cell]
 }
