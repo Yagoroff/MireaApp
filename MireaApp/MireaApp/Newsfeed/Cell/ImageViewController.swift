@@ -31,6 +31,11 @@ class ImageViewController: UIViewController {
         setScrollView()
         makeConstraints()
     }
+    
+    func setImage(stringUrl: String) {
+        guard let url = URL(string: stringUrl) else {return}
+        imageViewForZoom.sd_setImage(with: url, completed: nil)
+    }
 }
 
 extension ImageViewController {
@@ -43,11 +48,6 @@ extension ImageViewController {
             imageViewForZoom.centerYAnchor.constraint(equalTo: scrollView.centerYAnchor),
             imageViewForZoom.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor)
         ])
-    }
-    
-    func setImage(stringUrl: String) {
-        guard let url = URL(string: stringUrl) else {return}
-        imageViewForZoom.sd_setImage(with: url, completed: nil)
     }
     
     private func setScrollView() {

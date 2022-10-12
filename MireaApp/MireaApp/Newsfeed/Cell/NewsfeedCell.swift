@@ -18,7 +18,7 @@ class NewsfeedCell: UITableViewCell {
     
     static let reuseId = "NewsfeedCell"
     
-    let postView: UIView = {
+    private let postView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.init(rgb: 0x574af9)
         view.layer.cornerRadius = 5
@@ -29,13 +29,13 @@ class NewsfeedCell: UITableViewCell {
         return view
     } ()
     
-    let postImageView: UIImageView = {
+    private let postImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         return imageView
     } ()
     
-    let postLabel: UILabel = {
+    private let postLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
         label.textAlignment = .center

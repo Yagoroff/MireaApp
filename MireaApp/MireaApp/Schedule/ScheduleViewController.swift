@@ -17,10 +17,10 @@ class ScheduleViewController: UIViewController, ScheduleDisplayLogic {
   var interactor: ScheduleBusinessLogic?
   var router: (NSObjectProtocol & ScheduleRoutingLogic)?
     
-    private lazy var teachersViewModel = TeachersViewModel.init(cells: [])
+    private var teachersViewModel = TeachersViewModel.init(cells: [])
     
     private lazy var scheduleViewModel = ScheduleViewModel.init(cells: [])
-    
+
     private lazy var scheduleWeekViewModel = ScheduleWeekViewModel.init(cells: [])
     
     private let networkService: Networking = NetworkService()
@@ -29,11 +29,11 @@ class ScheduleViewController: UIViewController, ScheduleDisplayLogic {
     
     private lazy var selectWeek: Int = 0
     
-    private lazy var countOfWeeks: [Int] = [1, 2, 3, 4, 5, 6,
+    private let countOfWeeks: [Int] = [1, 2, 3, 4, 5, 6,
                                             7, 8, 9, 10, 11, 12,
                                             13, 14, 15, 16, 17, 18]
     
-    private let collectionViewForSchedule: UICollectionView = {
+    private lazy var collectionViewForSchedule: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.itemSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 7)
@@ -42,6 +42,10 @@ class ScheduleViewController: UIViewController, ScheduleDisplayLogic {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     } ()
+    
+    //Все, что связано с выбором учителя
+    
+    private let pickerTeacherView = UIPickerView()
     
     private let findTeacherView: UIView = {
         let view = UIView()
@@ -53,20 +57,6 @@ class ScheduleViewController: UIViewController, ScheduleDisplayLogic {
         view.layer.shadowOpacity = 0.7
         view.layer.shadowOffset = CGSize(width: 2.5, height: 2.5)
         return view
-    } ()
-    
-    private let numberField: UITextField = {
-        let field = UITextField()
-        field.translatesAutoresizingMaskIntoConstraints = false
-        field.textAlignment = .center
-        field.layer.cornerRadius = 5
-        field.placeholder = "Неделя"
-        field.backgroundColor = UIColor.init(rgb: 0xeeedff)
-        field.layer.shadowColor = UIColor.black.cgColor
-        field.layer.shadowRadius = 2
-        field.layer.shadowOpacity = 0.7
-        field.layer.shadowOffset = CGSize(width: 2.5, height: 2.5)
-        return field
     } ()
     
     private let textField: UITextField = {
@@ -88,11 +78,7 @@ class ScheduleViewController: UIViewController, ScheduleDisplayLogic {
         return imageView
     } ()
     
-    private let pickerTeacherView = UIPickerView()
-    
-    private let pickerNumberOfWeekView = UIPickerView()
-    
-    private let toolBar: UIToolbar = {
+    private lazy var toolBar: UIToolbar = {
         let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.default
         toolBar.isTranslucent = true
@@ -106,7 +92,25 @@ class ScheduleViewController: UIViewController, ScheduleDisplayLogic {
         return toolBar
     } ()
     
-    private let toolBarForWeek: UIToolbar = {
+    //Все, что связано с выбором недели
+    
+    private let pickerNumberOfWeekView = UIPickerView()
+    
+    private let numberField: UITextField = {
+        let field = UITextField()
+        field.translatesAutoresizingMaskIntoConstraints = false
+        field.textAlignment = .center
+        field.layer.cornerRadius = 5
+        field.placeholder = "Неделя"
+        field.backgroundColor = UIColor.init(rgb: 0xeeedff)
+        field.layer.shadowColor = UIColor.black.cgColor
+        field.layer.shadowRadius = 2
+        field.layer.shadowOpacity = 0.7
+        field.layer.shadowOffset = CGSize(width: 2.5, height: 2.5)
+        return field
+    } ()
+    
+    private lazy var toolBarForWeek: UIToolbar = {
         let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.default
         toolBar.isTranslucent = true
@@ -119,6 +123,8 @@ class ScheduleViewController: UIViewController, ScheduleDisplayLogic {
         toolBar.isUserInteractionEnabled = true
         return toolBar
     } ()
+    
+    //Кнопки для вывода расписания
 
     private let buttonForSearchSchedule: UIButton = {
         let button = UIButton()
@@ -152,7 +158,7 @@ class ScheduleViewController: UIViewController, ScheduleDisplayLogic {
         return button
     } ()
     
-    private let errorLable: UILabel = {
+    private lazy var errorLable: UILabel = {
         let label = UILabel()
         label.text = "Пар нет!"
         label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
@@ -194,25 +200,10 @@ class ScheduleViewController: UIViewController, ScheduleDisplayLogic {
     super.viewDidLoad()
       title = "Расписание"
       view.backgroundColor = .white
-      view.addSubview(findTeacherView)
-      view.addSubview(numberField)
-      findTeacherView.addSubview(textField)
-      findTeacherView.addSubview(imageSearch)
-      view.addSubview(buttonForSearchSchedule)
-      view.addSubview(buttonForScheduleOnWeek)
-      view.addSubview(collectionViewForSchedule)
-      view.addSubview(errorLable)
-      textField.inputView = pickerTeacherView
-      textField.inputAccessoryView = toolBar
-      numberField.inputView = pickerNumberOfWeekView
-      numberField.inputAccessoryView = toolBarForWeek
+      addSubviews()
+      setPickers()
+      setCollection()
       makeConstraints()
-      pickerTeacherView.dataSource = self
-      pickerTeacherView.delegate = self
-      pickerNumberOfWeekView.dataSource = self
-      pickerNumberOfWeekView.delegate = self
-      collectionViewForSchedule.dataSource = self
-      collectionViewForSchedule.delegate = self
       interactor?.makeRequest(request: .getTeachers)
   }
 
@@ -247,16 +238,17 @@ extension ScheduleViewController {
         textField.resignFirstResponder()
     }
     
-    @objc func cancelPicker(_ sender: UIButton) {
+    @objc private func cancelPicker(_ sender: UIButton) {
         textField.resignFirstResponder()
     }
     
     @objc private func donePickerForWeek(_ sender: UIButton) {
+        guard selectWeek != 0 else { numberField.resignFirstResponder(); return}
         numberField.text = String(selectWeek)
         numberField.resignFirstResponder()
     }
     
-    @objc func cancelPickerForWeek(_ sender: UIButton) {
+    @objc private func cancelPickerForWeek(_ sender: UIButton) {
         numberField.resignFirstResponder()
     }
     
@@ -276,7 +268,34 @@ extension ScheduleViewController {
         }
     }
     
-    func makeConstraints() {
+    private func addSubviews() {
+        view.addSubview(findTeacherView)
+        view.addSubview(numberField)
+        findTeacherView.addSubview(textField)
+        findTeacherView.addSubview(imageSearch)
+        view.addSubview(buttonForSearchSchedule)
+        view.addSubview(buttonForScheduleOnWeek)
+        view.addSubview(collectionViewForSchedule)
+        view.addSubview(errorLable)
+    }
+    
+    private func setPickers() {
+        textField.inputView = pickerTeacherView
+        textField.inputAccessoryView = toolBar
+        numberField.inputView = pickerNumberOfWeekView
+        numberField.inputAccessoryView = toolBarForWeek
+        pickerTeacherView.dataSource = self
+        pickerTeacherView.delegate = self
+        pickerNumberOfWeekView.dataSource = self
+        pickerNumberOfWeekView.delegate = self
+    }
+    
+    private func setCollection() {
+        collectionViewForSchedule.dataSource = self
+        collectionViewForSchedule.delegate = self
+    }
+    
+    private func makeConstraints() {
         NSLayoutConstraint.activate([
             findTeacherView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: view.frame.height / 40),
             findTeacherView.heightAnchor.constraint(equalToConstant: 40),

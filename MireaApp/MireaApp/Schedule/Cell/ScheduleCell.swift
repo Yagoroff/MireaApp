@@ -11,9 +11,9 @@ class ScheduleCell: UICollectionViewCell {
     
     static let reuseId = "ScheduleCell"
     
-    let DICTWEEKS = [1: "Понедельник", 2: "Вторник", 3: "Среда", 4: "Четверг", 5: "Пятница", 6: "Суббота"]
+    private let DICTWEEKS = [1: "Понедельник", 2: "Вторник", 3: "Среда", 4: "Четверг", 5: "Пятница", 6: "Суббота"]
     
-    private let cardView: UIView = {
+    private lazy var cardView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.init(rgb: 0x574af9)
         view.layer.cornerRadius = 5
@@ -25,7 +25,7 @@ class ScheduleCell: UICollectionViewCell {
         return view
     } ()
     
-    private let labelForLocation: UILabel = {
+    private lazy var labelForLocation: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 17)
@@ -34,7 +34,7 @@ class ScheduleCell: UICollectionViewCell {
         return label
     } ()
     
-    private let labelForSubject: UILabel = {
+    private lazy var labelForSubject: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 17)
@@ -49,7 +49,10 @@ class ScheduleCell: UICollectionViewCell {
         contentView.addSubview(cardView)
         cardView.addSubview(labelForLocation)
         cardView.addSubview(labelForSubject)
-        
+        makeConstraints()
+    }
+    
+    private func makeConstraints() {
         NSLayoutConstraint.activate([
             cardView.topAnchor.constraint(equalTo: contentView.topAnchor),
             cardView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),

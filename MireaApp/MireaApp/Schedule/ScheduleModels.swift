@@ -35,6 +35,8 @@ enum Schedule {
   }
 }
 
+//Учителя
+
 struct TeachersViewModel {
     struct Cell {
         let id: Int?
@@ -42,6 +44,9 @@ struct TeachersViewModel {
     }
     var cells: [Cell]
 }
+
+
+//Расписание на семестр
 
 struct ScheduleViewModel {
     
@@ -55,6 +60,8 @@ struct ScheduleViewModel {
     
     let cells: [Cell]
 }
+
+//Расписание на неделю
 
 struct ScheduleWeekViewModel {
     

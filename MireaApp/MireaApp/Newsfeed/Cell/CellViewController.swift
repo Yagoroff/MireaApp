@@ -30,7 +30,7 @@ class CellViewController: UIViewController {
         return imageView
     } ()
     
-    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    @objc private func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
         let imageViewController = ImageViewController()
         imageViewController.setImage(stringUrl: urlImage)
@@ -49,14 +49,32 @@ class CellViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
+        setTapGestureRecognizer()
+        addSubviews()
+        makeConstraints()
+    }
+    
+    func set(viewModel: FeedCellViewModel) {
+        postLabel.text = viewModel.name
+        
+        guard let url = URL(string: viewModel.image!) else {return}
+        urlImage = viewModel.image!
+        postImageView.sd_setImage(with: url, completed: nil)
+    }
+}
+
+extension CellViewController {
+    private func setTapGestureRecognizer() {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         postImageView.isUserInteractionEnabled = true
         postImageView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    private func addSubviews() {
         view.addSubview(postView)
         postView.addSubview(postImageView)
         postView.addSubview(postLabel)
-        view.backgroundColor = .white
-        makeConstraints()
     }
     
     private func makeConstraints() {
@@ -74,13 +92,5 @@ class CellViewController: UIViewController {
             postLabel.bottomAnchor.constraint(equalTo: postView.bottomAnchor),
             postLabel.widthAnchor.constraint(equalTo: postView.widthAnchor, multiplier: 0.9),
         ])
-    }
-    
-    func set(viewModel: FeedCellViewModel) {
-        postLabel.text = viewModel.name
-        
-        guard let url = URL(string: viewModel.image!) else {return}
-        urlImage = viewModel.image!
-        postImageView.sd_setImage(with: url, completed: nil)
     }
 }

@@ -23,14 +23,14 @@ class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic {
     
     private var pageCount = 0
             
-    let tableView: UITableView = {
+    private let tableView: UITableView = {
         let table = UITableView(frame: .zero)
         table.translatesAutoresizingMaskIntoConstraints = false
         table.register(NewsfeedCell.self, forCellReuseIdentifier: NewsfeedCell.reuseId)
         return table
     } ()
     
-    private var refreshControl: UIRefreshControl = {
+    private lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         return refreshControl
@@ -62,27 +62,16 @@ class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic {
   }
   
   // MARK: View lifecycle
-    func setTableView() {
-        tableView.addSubview(refreshControl)
-        view.addSubview(tableView)
-        tableView.tableFooterView = footerView
-        tableView.delegate = self
-        tableView.dataSource = self
-    }
     
   override func viewDidLoad() {
     super.viewDidLoad()
       title = "Новости"
       view.backgroundColor = .systemBackground
       setTableView()
+      makeConstraints()
       interactor?.makeRequest(request: .getNewsFeed(page: pageCount))
-      NSLayoutConstraint.activate([
-        tableView.topAnchor.constraint(equalTo: view.topAnchor),
-        tableView.widthAnchor.constraint(equalTo: view.widthAnchor),
-        tableView.heightAnchor.constraint(equalTo: view.heightAnchor),
-      ])
   }
-  
+    
   func displayData(viewModel: Newsfeed.Model.ViewModel.ViewModelData) {
       switch viewModel {
           
@@ -100,6 +89,31 @@ class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic {
             pageCount += 1
             interactor?.makeRequest(request: Newsfeed.Model.Request.RequestType.getNewsFeed(page: pageCount))
         }
+    }
+}
+
+extension NewsfeedViewController {
+    
+    private func setTableView() {
+        tableView.addSubview(refreshControl)
+        view.addSubview(tableView)
+        tableView.tableFooterView = footerView
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
+    private func makeConstraints() {
+        NSLayoutConstraint.activate([
+          tableView.topAnchor.constraint(equalTo: view.topAnchor),
+          tableView.widthAnchor.constraint(equalTo: view.widthAnchor),
+          tableView.heightAnchor.constraint(equalTo: view.heightAnchor),
+        ])
+    }
+    
+    @objc private func refresh() {
+        pageCount = 0
+        interactor?.makeRequest(request: Newsfeed.Model.Request.RequestType.getNewsFeed(page: pageCount))
+        feedViewModel.cells = []
     }
 }
 
@@ -124,13 +138,5 @@ extension NewsfeedViewController: UITableViewDelegate, UITableViewDataSource {
         let cellViewModel = feedViewModel.cells[indexPath.row]
         cellViewController.set(viewModel: cellViewModel)
         navigationController?.pushViewController(cellViewController, animated: true)
-    }
-}
-
-extension NewsfeedViewController {
-    @objc private func refresh() {
-        pageCount = 0
-        interactor?.makeRequest(request: Newsfeed.Model.Request.RequestType.getNewsFeed(page: pageCount))
-        feedViewModel.cells = []
     }
 }

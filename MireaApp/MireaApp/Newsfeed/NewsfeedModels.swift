@@ -29,6 +29,8 @@ enum Newsfeed {
   }
 }
 
+//Новостые ячейки
+
 struct FeedViewModel {
     struct Cell: FeedCellViewModel {
         var id: Int?
