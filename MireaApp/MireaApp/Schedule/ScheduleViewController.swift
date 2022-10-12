@@ -27,7 +27,7 @@ class ScheduleViewController: UIViewController, ScheduleDisplayLogic {
     
     private lazy var nameTeacher: String? = ""
     
-    private lazy var selectWeek: Int = 1
+    private lazy var selectWeek: Int = 0
     
     private lazy var countOfWeeks: [Int] = [1, 2, 3, 4, 5, 6,
                                             7, 8, 9, 10, 11, 12,
@@ -123,7 +123,7 @@ class ScheduleViewController: UIViewController, ScheduleDisplayLogic {
     private let buttonForSearchSchedule: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Вывести расписание", for: .normal)
+        button.setTitle("На семестр", for: .normal)
         button.layer.cornerRadius = 10
         button.backgroundColor = UIColor.init(rgb: 0x574af9)
         button.titleLabel?.numberOfLines = 0
@@ -139,7 +139,7 @@ class ScheduleViewController: UIViewController, ScheduleDisplayLogic {
     private let buttonForScheduleOnWeek: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Вывести на неделю", for: .normal)
+        button.setTitle("На неделю", for: .normal)
         button.layer.cornerRadius = 10
         button.backgroundColor = UIColor.init(rgb: 0x574af9)
         button.titleLabel?.numberOfLines = 0
@@ -150,6 +150,15 @@ class ScheduleViewController: UIViewController, ScheduleDisplayLogic {
         button.layer.shadowOpacity = 0.7
         button.layer.shadowOffset = CGSize(width: 3, height: 3)
         return button
+    } ()
+    
+    private let errorLable: UILabel = {
+        let label = UILabel()
+        label.text = "Пар нет!"
+        label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.isHidden = true
+        return label
     } ()
     
     
@@ -192,6 +201,7 @@ class ScheduleViewController: UIViewController, ScheduleDisplayLogic {
       view.addSubview(buttonForSearchSchedule)
       view.addSubview(buttonForScheduleOnWeek)
       view.addSubview(collectionViewForSchedule)
+      view.addSubview(errorLable)
       textField.inputView = pickerTeacherView
       textField.inputAccessoryView = toolBar
       numberField.inputView = pickerNumberOfWeekView
@@ -212,12 +222,20 @@ class ScheduleViewController: UIViewController, ScheduleDisplayLogic {
           self.teachersViewModel = teachersViewModel
           pickerTeacherView.reloadAllComponents()
       case .displaySchedule(schedule: let schedule):
+          errorLable.isHidden = true
           self.scheduleViewModel = schedule
           self.scheduleWeekViewModel = ScheduleWeekViewModel.init(cells: [])
+          if scheduleViewModel.cells.isEmpty {
+              errorLable.isHidden = false
+          }
           collectionViewForSchedule.reloadData()
       case .presentScheduleOnWeek(schedule: let schedule):
+          errorLable.isHidden = true
           self.scheduleWeekViewModel = schedule
           self.scheduleViewModel = ScheduleViewModel.init(cells: [])
+          if scheduleWeekViewModel.cells.isEmpty {
+              errorLable.isHidden = false
+          }
           collectionViewForSchedule.reloadData()
       }
   }
@@ -286,6 +304,8 @@ extension ScheduleViewController {
             collectionViewForSchedule.topAnchor.constraint(equalTo: buttonForSearchSchedule.bottomAnchor, constant: 20),
             collectionViewForSchedule.widthAnchor.constraint(equalTo: view.widthAnchor),
             collectionViewForSchedule.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.6),
+            errorLable.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            errorLable.centerYAnchor.constraint(equalTo: view.centerYAnchor),
         ])
     }
 }

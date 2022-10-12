@@ -25,7 +25,8 @@ class MainTabBarViewController: UITabBarController {
         vc3.navigationBar.prefersLargeTitles = true
         
         tabBar.tintColor = UIColor.init(rgb: 0x574af9)
-        
+        tabBar.barTintColor = .white
+
         setViewControllers([vc1, vc2, vc3], animated: true)
     }
     

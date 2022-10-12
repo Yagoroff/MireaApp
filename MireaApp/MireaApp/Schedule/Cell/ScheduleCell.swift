@@ -28,7 +28,7 @@ class ScheduleCell: UICollectionViewCell {
     private let labelForLocation: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.font = UIFont(name: label.font.fontName, size: 17)
+        label.font = UIFont.systemFont(ofSize: 17)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
         return label
@@ -37,7 +37,7 @@ class ScheduleCell: UICollectionViewCell {
     private let labelForSubject: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.font = UIFont(name: label.font.fontName, size: 17)
+        label.font = UIFont.systemFont(ofSize: 17)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
         return label

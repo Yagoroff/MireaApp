@@ -27,7 +27,7 @@ class NewsfeedInteractor: NewsfeedBusinessLogic {
       switch request {
           
       case .getNewsFeed(page: let page):
-          var params = ["limit": "5"]
+          var params = ["limit": "10"]
           params["page"] = String(page)
           networkService.request(path: API.news, params: params) { data, error in
               if let error = error {

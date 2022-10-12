@@ -19,6 +19,8 @@ class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic {
     
     private var feedViewModel = FeedViewModel.init(cells: [])
     
+    private lazy var footerView = FooterView()
+    
     private var pageCount = 0
             
     let tableView: UITableView = {
@@ -33,7 +35,6 @@ class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic {
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         return refreshControl
     } ()
-
   // MARK: Object lifecycle
   
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -64,6 +65,7 @@ class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic {
     func setTableView() {
         tableView.addSubview(refreshControl)
         view.addSubview(tableView)
+        tableView.tableFooterView = footerView
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -86,16 +88,15 @@ class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic {
           
       case .displayNewsFeed(feedViewModel: let feedViewModel):
           self.feedViewModel.cells += feedViewModel.cells
+          footerView.hideLoader()
           tableView.reloadData()
           refreshControl.endRefreshing()
-//          self.feedViewModel.cells.map { cell in
-//              print(cell.id)
-//          }
       }
   }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        if scrollView.contentOffset.y > scrollView.contentSize.height / 1.4 {
+        if scrollView.contentOffset.y > scrollView.contentSize.height - scrollView.frame.size.height {
+            footerView.showLoader()
             pageCount += 1
             interactor?.makeRequest(request: Newsfeed.Model.Request.RequestType.getNewsFeed(page: pageCount))
         }
@@ -116,6 +117,13 @@ extension NewsfeedViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UIScreen.main.bounds.height/2
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cellViewController = CellViewController()
+        let cellViewModel = feedViewModel.cells[indexPath.row]
+        cellViewController.set(viewModel: cellViewModel)
+        navigationController?.pushViewController(cellViewController, animated: true)
     }
 }
 
