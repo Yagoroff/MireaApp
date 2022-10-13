@@ -322,7 +322,7 @@ extension ScheduleViewController {
             buttonForScheduleOnWeek.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -view.frame.width / 20),
             collectionViewForSchedule.topAnchor.constraint(equalTo: buttonForSearchSchedule.bottomAnchor, constant: 20),
             collectionViewForSchedule.widthAnchor.constraint(equalTo: view.widthAnchor),
-            collectionViewForSchedule.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.6),
+            collectionViewForSchedule.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             errorLable.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             errorLable.centerYAnchor.constraint(equalTo: view.centerYAnchor),
         ])
@@ -362,7 +362,7 @@ extension ScheduleViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
 }
 
-extension ScheduleViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension ScheduleViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if !scheduleViewModel.cells.isEmpty {
             return scheduleViewModel.cells.count
@@ -384,5 +384,9 @@ extension ScheduleViewController: UICollectionViewDelegate, UICollectionViewData
         }
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 5)
     }
 }
