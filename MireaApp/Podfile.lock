@@ -1,0 +1,20 @@
+PODS:
+  - ActiveLabel (1.1.0)
+  - TinyConstraints (4.0.2)
+
+DEPENDENCIES:
+  - ActiveLabel
+  - TinyConstraints
+
+SPEC REPOS:
+  trunk:
+    - ActiveLabel
+    - TinyConstraints
+
+SPEC CHECKSUMS:
+  ActiveLabel: 5e3f4de79a1952d4604b845a0610d4776e4b82b3
+  TinyConstraints: 7b7ccc0c485bb3bb47082138ff28bc33cd49897f
+
+PODFILE CHECKSUM: c40ff5549ced4b13a16f3b09af5a8f497a77713c
+
+COCOAPODS: 1.11.3

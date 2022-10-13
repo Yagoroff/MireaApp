@@ -7,6 +7,7 @@
 import Foundation
 import UIKit
 import SDWebImage
+import ActiveLabel
 
 protocol FeedCellViewModel {
     var id: Int? { get }
@@ -17,6 +18,8 @@ protocol FeedCellViewModel {
 class NewsfeedCell: UITableViewCell {
     
     static let reuseId = "NewsfeedCell"
+    
+    private lazy var networkService: Networking = NetworkService()
     
     private let postView: UIView = {
         let view = UIView()
@@ -35,11 +38,25 @@ class NewsfeedCell: UITableViewCell {
         return imageView
     } ()
     
-    private let postLabel: UILabel = {
-        let label = UILabel()
+    private let postLabel: ActiveLabel = {
+        let label = ActiveLabel()
         label.numberOfLines = 0
         label.textAlignment = .center
         label.textColor = .white
+        label.hashtagColor = .blue
+        label.mentionColor = .red
+        label.enabledTypes = [.hashtag, .mention]
+        
+        label.handleHashtagTap { hashtag in
+            guard let url = URL(string: "https://yandex.ru/search/?text=\(hashtag)") else { return }
+            UIApplication.shared.open(url)
+        }
+                
+        label.handleMentionTap { mention in
+            guard let url = URL(string: "https://yandex.ru/search/?text=\(mention)") else { return }
+            UIApplication.shared.open(url)
+        }
+        
         return label
     } ()
     

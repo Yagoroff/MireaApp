@@ -1,0 +1,6 @@
+framework module Pods_MireaApp_MireaAppUITests {
+  umbrella header "Pods-MireaApp-MireaAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,1203 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		003819A1B91F455375633418033FFEA7 /* Abstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911B9FCB7BD1570193EEB11A2F92AB1 /* Abstraction.swift */; };
+		04153A1A4F64DB87C7E47C3C17AB8BE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		1115643A33450931BF6F1438C6BA038B /* Pods-MireaApp-MireaAppUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0865BA2C5B25C3C4949498123975CF46 /* Pods-MireaApp-MireaAppUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15E2B9AA1F4AB790E0B47941123B1C1F /* ActiveLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815FA68E0BB2AC82628422BEBB20A2FA /* ActiveLabel.swift */; };
+		19B625DCBF2608036A726D4F6004AE41 /* Constrainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AED9A3B736E3AFC25E64DB0C485BC50 /* Constrainable.swift */; };
+		1ABF6E771EA3F79BE8829715133CAB03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		235C6BC0654C150374C6B533B9D33467 /* TinyConstraints+superview.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BE771E0A57A322E16EAFA4110350D /* TinyConstraints+superview.swift */; };
+		331B1A34FA008094EC3A78C124F0542D /* ActiveLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 28F585E62F6AD3008818205B1F926D4C /* ActiveLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CDB49943F320BC1F504F6F6790448CC /* TinyConstraints-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EE95F086589A4785E7651888AE3C677 /* TinyConstraints-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E5602E9B85B82EF1EA80ABCF76D7CC6 /* TinyConstraints-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 905E24B2D862AC48B9BE162DB0CAF87F /* TinyConstraints-dummy.m */; };
+		588EEA3FAF28A403ADD832A1496F412F /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776135B50B1F56B242D6371D14C3C7FD /* Constraints.swift */; };
+		5B31D4BA84A5556169C479053EC9CFEE /* ActiveLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 12CDAE6AC0C1929D55B0112E70547ABC /* ActiveLabel-dummy.m */; };
+		5B3832C0F50F17F87DCEC7789B2F6DBF /* ActiveType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B93D0B22F48FC6F34C26907E8C64 /* ActiveType.swift */; };
+		5B6FC223133A9A01F4C6AE8167161063 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		64810A75CC254B76D74E3F2586AD3B47 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB728478657914A7F67ACEAF9B032AB /* Stack.swift */; };
+		66821EFB40B4237AF532088CAF501AA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		8EB0A29F135FDC390FF7057204516A5D /* RegexParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977155039590C283AF39132296D8F4EA /* RegexParser.swift */; };
+		9DEA61D63C37565EFF616F39D99E3365 /* Pods-MireaAppTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B8F368938CC0D05B711EA0441AC84D2 /* Pods-MireaAppTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FC86B0DF30483BEC772265C38AA5440 /* TinyConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24CDF5E840AA30CDFEA2859134B0EE0 /* TinyConstraints.swift */; };
+		BF75F7C3CE5DF53FDC340EB541B30224 /* TinyEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DE81BA3602439CC4990CA88083D056 /* TinyEdgeInsets.swift */; };
+		CEFAE44DC851174C3DFDF8DB98848D9C /* Pods-MireaApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D14DF9B854B291222792B056A5CEAC /* Pods-MireaApp-dummy.m */; };
+		CF18B3181D1A71D25BE5AE4038E1D301 /* ActiveBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09553B0EC339F98A50947CD0AE372D5 /* ActiveBuilder.swift */; };
+		F618D8CD3044556E3C94E3889FC7966E /* Pods-MireaAppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE3488CD097E58AE312963CC6DDEF7A /* Pods-MireaAppTests-dummy.m */; };
+		F91032A84E0B0EAAA2AC0658B8618827 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		F9C2A93BD2C66F2A1A4214F4BF7B9803 /* StringTrimExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAA7E86592541EA8E2FACB538BC1F85 /* StringTrimExtension.swift */; };
+		FBA94FB61B6D86535B3627D2D5D5ECFB /* Pods-MireaApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EA576867AB6EB5F80C93751DA09CF4D /* Pods-MireaApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FBBE9939162E97803F945C2B2248281B /* Pods-MireaApp-MireaAppUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB3F00DE61EDA0E0E88F8D49CADA312 /* Pods-MireaApp-MireaAppUITests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3EA3C1B5E0FE204FFF57CCF762FA9F1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49325F8E399765AB99BEC97C8028CC85;
+			remoteInfo = "Pods-MireaApp";
+		};
+		674B05D02C23788E2A67D96639F030C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45C4E325E7851DD54CC3AD44C7A71935;
+			remoteInfo = TinyConstraints;
+		};
+		91404B99920E07504D30F6A8951522D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E18EE5DE3744DADF64511923F006E05;
+			remoteInfo = ActiveLabel;
+		};
+		C329C63DC5264A75F94DE68806AB6BA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45C4E325E7851DD54CC3AD44C7A71935;
+			remoteInfo = TinyConstraints;
+		};
+		F9A1B2CED4FC18C0C41F353F3E0143C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E18EE5DE3744DADF64511923F006E05;
+			remoteInfo = ActiveLabel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00C5DA0AD21E492D6D181B80114C8749 /* ActiveLabel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ActiveLabel-Info.plist"; sourceTree = "<group>"; };
+		010DEC45F9CA9E2BB081227B5F229B6E /* Pods-MireaApp-MireaAppUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MireaApp-MireaAppUITests-Info.plist"; sourceTree = "<group>"; };
+		0865BA2C5B25C3C4949498123975CF46 /* Pods-MireaApp-MireaAppUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MireaApp-MireaAppUITests-umbrella.h"; sourceTree = "<group>"; };
+		0A16F1A90D70D36C1E76A6C4FABD3C78 /* Pods-MireaApp-MireaAppUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MireaApp-MireaAppUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0B26D23DB298B0A05ACB20A12C9D330F /* Pods-MireaApp-MireaAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MireaApp-MireaAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0E42913F165991547DDB6A316B815D8C /* Pods-MireaApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MireaApp-Info.plist"; sourceTree = "<group>"; };
+		12CDAE6AC0C1929D55B0112E70547ABC /* ActiveLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ActiveLabel-dummy.m"; sourceTree = "<group>"; };
+		14B9DAF8D0DE47FE9CABC28F1DC8C843 /* Pods-MireaAppTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MireaAppTests-Info.plist"; sourceTree = "<group>"; };
+		1808B4FF6C16104973BA5A656F23FC35 /* TinyConstraints-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyConstraints-prefix.pch"; sourceTree = "<group>"; };
+		1EC51FB94A6D69D1FD2FE64642142442 /* Pods-MireaApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MireaApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		22998B962A059A138A1F22707C16EF7D /* Pods-MireaAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MireaAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		242698546701C13E4F3A67DBB1ADBDF8 /* ActiveLabel */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ActiveLabel; path = ActiveLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		248EB203AE249596FFC55952F5590D95 /* TinyConstraints */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TinyConstraints; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25067D0617A0C9137B43FB5C7011344B /* TinyConstraints-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TinyConstraints-Info.plist"; sourceTree = "<group>"; };
+		28F585E62F6AD3008818205B1F926D4C /* ActiveLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ActiveLabel-umbrella.h"; sourceTree = "<group>"; };
+		2911B9FCB7BD1570193EEB11A2F92AB1 /* Abstraction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Abstraction.swift; path = TinyConstraints/Classes/Abstraction.swift; sourceTree = "<group>"; };
+		3AC0A6A86925A8EED4AC4BD0FCCC76FE /* Pods-MireaApp-MireaAppUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MireaApp-MireaAppUITests"; path = Pods_MireaApp_MireaAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B60E96F18C691502DDE702C3597B3AC /* Pods-MireaAppTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MireaAppTests"; path = Pods_MireaAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4066F15D771015F9CF5EFCD0EE23215F /* Pods-MireaAppTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MireaAppTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		48C4F87C5C8C20811C7F5642BBA44992 /* Pods-MireaAppTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MireaAppTests.modulemap"; sourceTree = "<group>"; };
+		49E0AA7988218C429149D37207A2F6C9 /* ActiveLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ActiveLabel-prefix.pch"; sourceTree = "<group>"; };
+		4AED9A3B736E3AFC25E64DB0C485BC50 /* Constrainable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constrainable.swift; path = TinyConstraints/Classes/Constrainable.swift; sourceTree = "<group>"; };
+		4ECFD20BC94DE1EE8DF0C4FE552C2FDA /* Pods-MireaApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MireaApp.modulemap"; sourceTree = "<group>"; };
+		5287B93D0B22F48FC6F34C26907E8C64 /* ActiveType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActiveType.swift; path = ActiveLabel/ActiveType.swift; sourceTree = "<group>"; };
+		5807FE47138B1E5D99B314F440AA9688 /* Pods-MireaApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MireaApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		5C0D18392CC31AE499C16117095105C4 /* TinyConstraints.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TinyConstraints.debug.xcconfig; sourceTree = "<group>"; };
+		5C3DAF1C7566A129ED22EA68554C7823 /* Pods-MireaApp-MireaAppUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MireaApp-MireaAppUITests-frameworks.sh"; sourceTree = "<group>"; };
+		5EE95F086589A4785E7651888AE3C677 /* TinyConstraints-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyConstraints-umbrella.h"; sourceTree = "<group>"; };
+		6C87F6CE373E02F3A6AE6D6A5AF44EAF /* Pods-MireaAppTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MireaAppTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		776135B50B1F56B242D6371D14C3C7FD /* Constraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraints.swift; path = TinyConstraints/Classes/Constraints.swift; sourceTree = "<group>"; };
+		7DB728478657914A7F67ACEAF9B032AB /* Stack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stack.swift; path = TinyConstraints/Classes/Stack.swift; sourceTree = "<group>"; };
+		815FA68E0BB2AC82628422BEBB20A2FA /* ActiveLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActiveLabel.swift; path = ActiveLabel/ActiveLabel.swift; sourceTree = "<group>"; };
+		8231B685628857B347BBE518BDB79FDA /* Pods-MireaApp-MireaAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MireaApp-MireaAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8B049330E2D57D97FD953EF9D3A5EDD7 /* Pods-MireaAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MireaAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8B8F368938CC0D05B711EA0441AC84D2 /* Pods-MireaAppTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MireaAppTests-umbrella.h"; sourceTree = "<group>"; };
+		8EA576867AB6EB5F80C93751DA09CF4D /* Pods-MireaApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MireaApp-umbrella.h"; sourceTree = "<group>"; };
+		8EAA7E86592541EA8E2FACB538BC1F85 /* StringTrimExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringTrimExtension.swift; path = ActiveLabel/StringTrimExtension.swift; sourceTree = "<group>"; };
+		905E24B2D862AC48B9BE162DB0CAF87F /* TinyConstraints-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TinyConstraints-dummy.m"; sourceTree = "<group>"; };
+		97237F250BDC0E4292065BC23F1F9851 /* TinyConstraints.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TinyConstraints.release.xcconfig; sourceTree = "<group>"; };
+		977155039590C283AF39132296D8F4EA /* RegexParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RegexParser.swift; path = ActiveLabel/RegexParser.swift; sourceTree = "<group>"; };
+		9C9AEFBDC5E4BDF62C23949D83C6ECC8 /* Pods-MireaApp-MireaAppUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MireaApp-MireaAppUITests.modulemap"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A7206A167B78A4E9A846C2960CD00627 /* ActiveLabel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ActiveLabel.debug.xcconfig; sourceTree = "<group>"; };
+		AEE3488CD097E58AE312963CC6DDEF7A /* Pods-MireaAppTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MireaAppTests-dummy.m"; sourceTree = "<group>"; };
+		B09553B0EC339F98A50947CD0AE372D5 /* ActiveBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActiveBuilder.swift; path = ActiveLabel/ActiveBuilder.swift; sourceTree = "<group>"; };
+		B0AF18AE534FEA3286B64AF5A405AA72 /* TinyConstraints.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TinyConstraints.modulemap; sourceTree = "<group>"; };
+		B24CDF5E840AA30CDFEA2859134B0EE0 /* TinyConstraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TinyConstraints.swift; path = TinyConstraints/Classes/TinyConstraints.swift; sourceTree = "<group>"; };
+		B8DE81BA3602439CC4990CA88083D056 /* TinyEdgeInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TinyEdgeInsets.swift; path = TinyConstraints/Classes/TinyEdgeInsets.swift; sourceTree = "<group>"; };
+		D039A4259D658C9288A760F925325774 /* Pods-MireaApp */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MireaApp"; path = Pods_MireaApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2D168BE6DDE699E6DE81016D415D769 /* Pods-MireaApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MireaApp-frameworks.sh"; sourceTree = "<group>"; };
+		D61A138FC34269B19CE64FD8AD928719 /* Pods-MireaApp-MireaAppUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MireaApp-MireaAppUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		DF2603B32EC810FBD59D7524CEBADE53 /* ActiveLabel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ActiveLabel.release.xcconfig; sourceTree = "<group>"; };
+		E25BE771E0A57A322E16EAFA4110350D /* TinyConstraints+superview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TinyConstraints+superview.swift"; path = "TinyConstraints/Classes/TinyConstraints+superview.swift"; sourceTree = "<group>"; };
+		E58B8438CE88E98CC53423FC5778D808 /* ActiveLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ActiveLabel.modulemap; sourceTree = "<group>"; };
+		ECB3F00DE61EDA0E0E88F8D49CADA312 /* Pods-MireaApp-MireaAppUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MireaApp-MireaAppUITests-dummy.m"; sourceTree = "<group>"; };
+		F3D14DF9B854B291222792B056A5CEAC /* Pods-MireaApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MireaApp-dummy.m"; sourceTree = "<group>"; };
+		FCD7A056F515B3BF4FFC564227F50489 /* Pods-MireaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MireaApp.debug.xcconfig"; sourceTree = "<group>"; };
+		FD98C741D1CD387F7C3EF40F44A9AA03 /* Pods-MireaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MireaApp.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3417C6F6FBAF20AC02C30EB88176EB46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66821EFB40B4237AF532088CAF501AA4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61D98366372BF493C6DAF00D74060EE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ABF6E771EA3F79BE8829715133CAB03 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		794D42F6E898C633EC85763DDD5F04A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F91032A84E0B0EAAA2AC0658B8618827 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99EBD1D1C4BAB2CDA5481D389C9601FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04153A1A4F64DB87C7E47C3C17AB8BE2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E48FEB9D43702270313282DBF5F6E37F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B6FC223133A9A01F4C6AE8167161063 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07C86245AA9235C4F7A39F8C277499AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F537A4D3B58CE3FEB4C53575F187A6F9 /* ActiveLabel */,
+				6F8293EA08A7D0F9A9821D213996E1E3 /* TinyConstraints */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		27A6AE9C6DAEF284C84130292476C513 /* Pods-MireaApp */ = {
+			isa = PBXGroup;
+			children = (
+				4ECFD20BC94DE1EE8DF0C4FE552C2FDA /* Pods-MireaApp.modulemap */,
+				1EC51FB94A6D69D1FD2FE64642142442 /* Pods-MireaApp-acknowledgements.markdown */,
+				5807FE47138B1E5D99B314F440AA9688 /* Pods-MireaApp-acknowledgements.plist */,
+				F3D14DF9B854B291222792B056A5CEAC /* Pods-MireaApp-dummy.m */,
+				D2D168BE6DDE699E6DE81016D415D769 /* Pods-MireaApp-frameworks.sh */,
+				0E42913F165991547DDB6A316B815D8C /* Pods-MireaApp-Info.plist */,
+				8EA576867AB6EB5F80C93751DA09CF4D /* Pods-MireaApp-umbrella.h */,
+				FCD7A056F515B3BF4FFC564227F50489 /* Pods-MireaApp.debug.xcconfig */,
+				FD98C741D1CD387F7C3EF40F44A9AA03 /* Pods-MireaApp.release.xcconfig */,
+			);
+			name = "Pods-MireaApp";
+			path = "Target Support Files/Pods-MireaApp";
+			sourceTree = "<group>";
+		};
+		524343C70F677D3938D9E96878B77687 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				242698546701C13E4F3A67DBB1ADBDF8 /* ActiveLabel */,
+				D039A4259D658C9288A760F925325774 /* Pods-MireaApp */,
+				3AC0A6A86925A8EED4AC4BD0FCCC76FE /* Pods-MireaApp-MireaAppUITests */,
+				3B60E96F18C691502DDE702C3597B3AC /* Pods-MireaAppTests */,
+				248EB203AE249596FFC55952F5590D95 /* TinyConstraints */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6F8293EA08A7D0F9A9821D213996E1E3 /* TinyConstraints */ = {
+			isa = PBXGroup;
+			children = (
+				2911B9FCB7BD1570193EEB11A2F92AB1 /* Abstraction.swift */,
+				4AED9A3B736E3AFC25E64DB0C485BC50 /* Constrainable.swift */,
+				776135B50B1F56B242D6371D14C3C7FD /* Constraints.swift */,
+				7DB728478657914A7F67ACEAF9B032AB /* Stack.swift */,
+				B24CDF5E840AA30CDFEA2859134B0EE0 /* TinyConstraints.swift */,
+				E25BE771E0A57A322E16EAFA4110350D /* TinyConstraints+superview.swift */,
+				B8DE81BA3602439CC4990CA88083D056 /* TinyEdgeInsets.swift */,
+				AB7F05C2BA59A5A1D87AA925CCFABC32 /* Support Files */,
+			);
+			name = TinyConstraints;
+			path = TinyConstraints;
+			sourceTree = "<group>";
+		};
+		9DEEF7FB87E3C997C61B8D85F6D71D3D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E58B8438CE88E98CC53423FC5778D808 /* ActiveLabel.modulemap */,
+				12CDAE6AC0C1929D55B0112E70547ABC /* ActiveLabel-dummy.m */,
+				00C5DA0AD21E492D6D181B80114C8749 /* ActiveLabel-Info.plist */,
+				49E0AA7988218C429149D37207A2F6C9 /* ActiveLabel-prefix.pch */,
+				28F585E62F6AD3008818205B1F926D4C /* ActiveLabel-umbrella.h */,
+				A7206A167B78A4E9A846C2960CD00627 /* ActiveLabel.debug.xcconfig */,
+				DF2603B32EC810FBD59D7524CEBADE53 /* ActiveLabel.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ActiveLabel";
+			sourceTree = "<group>";
+		};
+		9E4C2D90DF8B4A9167C3A4AA6908D0ED /* Pods-MireaApp-MireaAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9C9AEFBDC5E4BDF62C23949D83C6ECC8 /* Pods-MireaApp-MireaAppUITests.modulemap */,
+				0A16F1A90D70D36C1E76A6C4FABD3C78 /* Pods-MireaApp-MireaAppUITests-acknowledgements.markdown */,
+				D61A138FC34269B19CE64FD8AD928719 /* Pods-MireaApp-MireaAppUITests-acknowledgements.plist */,
+				ECB3F00DE61EDA0E0E88F8D49CADA312 /* Pods-MireaApp-MireaAppUITests-dummy.m */,
+				5C3DAF1C7566A129ED22EA68554C7823 /* Pods-MireaApp-MireaAppUITests-frameworks.sh */,
+				010DEC45F9CA9E2BB081227B5F229B6E /* Pods-MireaApp-MireaAppUITests-Info.plist */,
+				0865BA2C5B25C3C4949498123975CF46 /* Pods-MireaApp-MireaAppUITests-umbrella.h */,
+				0B26D23DB298B0A05ACB20A12C9D330F /* Pods-MireaApp-MireaAppUITests.debug.xcconfig */,
+				8231B685628857B347BBE518BDB79FDA /* Pods-MireaApp-MireaAppUITests.release.xcconfig */,
+			);
+			name = "Pods-MireaApp-MireaAppUITests";
+			path = "Target Support Files/Pods-MireaApp-MireaAppUITests";
+			sourceTree = "<group>";
+		};
+		A0C4FF58F4A1C4840F71917685088E94 /* Pods-MireaAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				48C4F87C5C8C20811C7F5642BBA44992 /* Pods-MireaAppTests.modulemap */,
+				6C87F6CE373E02F3A6AE6D6A5AF44EAF /* Pods-MireaAppTests-acknowledgements.markdown */,
+				4066F15D771015F9CF5EFCD0EE23215F /* Pods-MireaAppTests-acknowledgements.plist */,
+				AEE3488CD097E58AE312963CC6DDEF7A /* Pods-MireaAppTests-dummy.m */,
+				14B9DAF8D0DE47FE9CABC28F1DC8C843 /* Pods-MireaAppTests-Info.plist */,
+				8B8F368938CC0D05B711EA0441AC84D2 /* Pods-MireaAppTests-umbrella.h */,
+				8B049330E2D57D97FD953EF9D3A5EDD7 /* Pods-MireaAppTests.debug.xcconfig */,
+				22998B962A059A138A1F22707C16EF7D /* Pods-MireaAppTests.release.xcconfig */,
+			);
+			name = "Pods-MireaAppTests";
+			path = "Target Support Files/Pods-MireaAppTests";
+			sourceTree = "<group>";
+		};
+		AB7F05C2BA59A5A1D87AA925CCFABC32 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B0AF18AE534FEA3286B64AF5A405AA72 /* TinyConstraints.modulemap */,
+				905E24B2D862AC48B9BE162DB0CAF87F /* TinyConstraints-dummy.m */,
+				25067D0617A0C9137B43FB5C7011344B /* TinyConstraints-Info.plist */,
+				1808B4FF6C16104973BA5A656F23FC35 /* TinyConstraints-prefix.pch */,
+				5EE95F086589A4785E7651888AE3C677 /* TinyConstraints-umbrella.h */,
+				5C0D18392CC31AE499C16117095105C4 /* TinyConstraints.debug.xcconfig */,
+				97237F250BDC0E4292065BC23F1F9851 /* TinyConstraints.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TinyConstraints";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				07C86245AA9235C4F7A39F8C277499AA /* Pods */,
+				524343C70F677D3938D9E96878B77687 /* Products */,
+				D12A2EB274782BC02B298F77BC6FC9AC /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D12A2EB274782BC02B298F77BC6FC9AC /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				27A6AE9C6DAEF284C84130292476C513 /* Pods-MireaApp */,
+				9E4C2D90DF8B4A9167C3A4AA6908D0ED /* Pods-MireaApp-MireaAppUITests */,
+				A0C4FF58F4A1C4840F71917685088E94 /* Pods-MireaAppTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F537A4D3B58CE3FEB4C53575F187A6F9 /* ActiveLabel */ = {
+			isa = PBXGroup;
+			children = (
+				B09553B0EC339F98A50947CD0AE372D5 /* ActiveBuilder.swift */,
+				815FA68E0BB2AC82628422BEBB20A2FA /* ActiveLabel.swift */,
+				5287B93D0B22F48FC6F34C26907E8C64 /* ActiveType.swift */,
+				977155039590C283AF39132296D8F4EA /* RegexParser.swift */,
+				8EAA7E86592541EA8E2FACB538BC1F85 /* StringTrimExtension.swift */,
+				9DEEF7FB87E3C997C61B8D85F6D71D3D /* Support Files */,
+			);
+			name = ActiveLabel;
+			path = ActiveLabel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3A897A711043AAF1052EFD3BE1EBEAF6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DEA61D63C37565EFF616F39D99E3365 /* Pods-MireaAppTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		922B9968500622EFD0D9DF7E1F1C5839 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				331B1A34FA008094EC3A78C124F0542D /* ActiveLabel-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAC758A0C4E8F07560F9836B2EB0FD93 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CDB49943F320BC1F504F6F6790448CC /* TinyConstraints-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9BE57E21B400A2394BD99406B3DA9CA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1115643A33450931BF6F1438C6BA038B /* Pods-MireaApp-MireaAppUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA522552BBA1E60CDE6F925B10A3185B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBA94FB61B6D86535B3627D2D5D5ECFB /* Pods-MireaApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		40C810A7D164B34B56B9361675662E74 /* Pods-MireaAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 054FD9F30A0B0DA9AF6D8F0823836FA5 /* Build configuration list for PBXNativeTarget "Pods-MireaAppTests" */;
+			buildPhases = (
+				3A897A711043AAF1052EFD3BE1EBEAF6 /* Headers */,
+				AEF1F567F5EEE3F2F363D38C30B229EA /* Sources */,
+				794D42F6E898C633EC85763DDD5F04A0 /* Frameworks */,
+				9421E393529024A2E4FF91BBF9F5AB89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCFE8E9CE11F5249BC8B6770ECAA3750 /* PBXTargetDependency */,
+			);
+			name = "Pods-MireaAppTests";
+			productName = Pods_MireaAppTests;
+			productReference = 3B60E96F18C691502DDE702C3597B3AC /* Pods-MireaAppTests */;
+			productType = "com.apple.product-type.framework";
+		};
+		45C4E325E7851DD54CC3AD44C7A71935 /* TinyConstraints */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F82ADE11EFCEC2B3A42D3D0BAB73E091 /* Build configuration list for PBXNativeTarget "TinyConstraints" */;
+			buildPhases = (
+				BAC758A0C4E8F07560F9836B2EB0FD93 /* Headers */,
+				DF92459D9FB5B70A4EA19E240046CFE6 /* Sources */,
+				99EBD1D1C4BAB2CDA5481D389C9601FD /* Frameworks */,
+				E8FDB45C583F6ED4A6E0F0B0B67108EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TinyConstraints;
+			productName = TinyConstraints;
+			productReference = 248EB203AE249596FFC55952F5590D95 /* TinyConstraints */;
+			productType = "com.apple.product-type.framework";
+		};
+		49325F8E399765AB99BEC97C8028CC85 /* Pods-MireaApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46D2B5FC59CB110678643C5B859803D0 /* Build configuration list for PBXNativeTarget "Pods-MireaApp" */;
+			buildPhases = (
+				FA522552BBA1E60CDE6F925B10A3185B /* Headers */,
+				F73898AAC4A6588BFED3661A8691F339 /* Sources */,
+				3417C6F6FBAF20AC02C30EB88176EB46 /* Frameworks */,
+				760F2C3D232077EE35FD4B6E106E67C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74C281882B136EE1F08285AEE0108FEE /* PBXTargetDependency */,
+				11EDBCBDDDDD1C9B31B54E21AB93AFF3 /* PBXTargetDependency */,
+			);
+			name = "Pods-MireaApp";
+			productName = Pods_MireaApp;
+			productReference = D039A4259D658C9288A760F925325774 /* Pods-MireaApp */;
+			productType = "com.apple.product-type.framework";
+		};
+		6E18EE5DE3744DADF64511923F006E05 /* ActiveLabel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06629A18CD34E1685199E9A3DBF4A183 /* Build configuration list for PBXNativeTarget "ActiveLabel" */;
+			buildPhases = (
+				922B9968500622EFD0D9DF7E1F1C5839 /* Headers */,
+				542E7D2115107237C996E061164176B2 /* Sources */,
+				61D98366372BF493C6DAF00D74060EE5 /* Frameworks */,
+				CA006536DFC99C6C239DA39AD3DF851B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ActiveLabel;
+			productName = ActiveLabel;
+			productReference = 242698546701C13E4F3A67DBB1ADBDF8 /* ActiveLabel */;
+			productType = "com.apple.product-type.framework";
+		};
+		8807656DDB1559150CF5D047DFBF8D0C /* Pods-MireaApp-MireaAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F43E649B3DFDF4EDDD9CE6E41BF19312 /* Build configuration list for PBXNativeTarget "Pods-MireaApp-MireaAppUITests" */;
+			buildPhases = (
+				F9BE57E21B400A2394BD99406B3DA9CA /* Headers */,
+				B1550D22CBDDA6534D5FADEEED90F67D /* Sources */,
+				E48FEB9D43702270313282DBF5F6E37F /* Frameworks */,
+				C40D1F931FB6B56B5897B4EBCCB45D5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				73034075B696C37783C77069C07B3CBA /* PBXTargetDependency */,
+				8C6D0AC241FEA8C074DC19FC3F4B0951 /* PBXTargetDependency */,
+			);
+			name = "Pods-MireaApp-MireaAppUITests";
+			productName = Pods_MireaApp_MireaAppUITests;
+			productReference = 3AC0A6A86925A8EED4AC4BD0FCCC76FE /* Pods-MireaApp-MireaAppUITests */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 524343C70F677D3938D9E96878B77687 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6E18EE5DE3744DADF64511923F006E05 /* ActiveLabel */,
+				49325F8E399765AB99BEC97C8028CC85 /* Pods-MireaApp */,
+				8807656DDB1559150CF5D047DFBF8D0C /* Pods-MireaApp-MireaAppUITests */,
+				40C810A7D164B34B56B9361675662E74 /* Pods-MireaAppTests */,
+				45C4E325E7851DD54CC3AD44C7A71935 /* TinyConstraints */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		760F2C3D232077EE35FD4B6E106E67C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9421E393529024A2E4FF91BBF9F5AB89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C40D1F931FB6B56B5897B4EBCCB45D5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA006536DFC99C6C239DA39AD3DF851B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8FDB45C583F6ED4A6E0F0B0B67108EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		542E7D2115107237C996E061164176B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF18B3181D1A71D25BE5AE4038E1D301 /* ActiveBuilder.swift in Sources */,
+				15E2B9AA1F4AB790E0B47941123B1C1F /* ActiveLabel.swift in Sources */,
+				5B31D4BA84A5556169C479053EC9CFEE /* ActiveLabel-dummy.m in Sources */,
+				5B3832C0F50F17F87DCEC7789B2F6DBF /* ActiveType.swift in Sources */,
+				8EB0A29F135FDC390FF7057204516A5D /* RegexParser.swift in Sources */,
+				F9C2A93BD2C66F2A1A4214F4BF7B9803 /* StringTrimExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEF1F567F5EEE3F2F363D38C30B229EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F618D8CD3044556E3C94E3889FC7966E /* Pods-MireaAppTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1550D22CBDDA6534D5FADEEED90F67D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBBE9939162E97803F945C2B2248281B /* Pods-MireaApp-MireaAppUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF92459D9FB5B70A4EA19E240046CFE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				003819A1B91F455375633418033FFEA7 /* Abstraction.swift in Sources */,
+				19B625DCBF2608036A726D4F6004AE41 /* Constrainable.swift in Sources */,
+				588EEA3FAF28A403ADD832A1496F412F /* Constraints.swift in Sources */,
+				64810A75CC254B76D74E3F2586AD3B47 /* Stack.swift in Sources */,
+				9FC86B0DF30483BEC772265C38AA5440 /* TinyConstraints.swift in Sources */,
+				235C6BC0654C150374C6B533B9D33467 /* TinyConstraints+superview.swift in Sources */,
+				4E5602E9B85B82EF1EA80ABCF76D7CC6 /* TinyConstraints-dummy.m in Sources */,
+				BF75F7C3CE5DF53FDC340EB541B30224 /* TinyEdgeInsets.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F73898AAC4A6588BFED3661A8691F339 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEFAE44DC851174C3DFDF8DB98848D9C /* Pods-MireaApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		11EDBCBDDDDD1C9B31B54E21AB93AFF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TinyConstraints;
+			target = 45C4E325E7851DD54CC3AD44C7A71935 /* TinyConstraints */;
+			targetProxy = 674B05D02C23788E2A67D96639F030C7 /* PBXContainerItemProxy */;
+		};
+		73034075B696C37783C77069C07B3CBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ActiveLabel;
+			target = 6E18EE5DE3744DADF64511923F006E05 /* ActiveLabel */;
+			targetProxy = F9A1B2CED4FC18C0C41F353F3E0143C1 /* PBXContainerItemProxy */;
+		};
+		74C281882B136EE1F08285AEE0108FEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ActiveLabel;
+			target = 6E18EE5DE3744DADF64511923F006E05 /* ActiveLabel */;
+			targetProxy = 91404B99920E07504D30F6A8951522D6 /* PBXContainerItemProxy */;
+		};
+		8C6D0AC241FEA8C074DC19FC3F4B0951 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TinyConstraints;
+			target = 45C4E325E7851DD54CC3AD44C7A71935 /* TinyConstraints */;
+			targetProxy = C329C63DC5264A75F94DE68806AB6BA0 /* PBXContainerItemProxy */;
+		};
+		BCFE8E9CE11F5249BC8B6770ECAA3750 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MireaApp";
+			target = 49325F8E399765AB99BEC97C8028CC85 /* Pods-MireaApp */;
+			targetProxy = 3EA3C1B5E0FE204FFF57CCF762FA9F1D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		09909ECBA13E8F70A928465E7F7A9A92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		13B381E813D1841A6FE08544F3A0E9B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCD7A056F515B3BF4FFC564227F50489 /* Pods-MireaApp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MireaApp/Pods-MireaApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MireaApp/Pods-MireaApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1AEAAC05DC723DCE634AFF54299FB430 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22998B962A059A138A1F22707C16EF7D /* Pods-MireaAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MireaAppTests/Pods-MireaAppTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MireaAppTests/Pods-MireaAppTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2BA98CEFEB572295756FC83FB7691ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD98C741D1CD387F7C3EF40F44A9AA03 /* Pods-MireaApp.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MireaApp/Pods-MireaApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MireaApp/Pods-MireaApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2DE0D8898245310716431F92FA4989FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		501B1AB6BD6781E5C49BB481501E221B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97237F250BDC0E4292065BC23F1F9851 /* TinyConstraints.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TinyConstraints/TinyConstraints-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TinyConstraints/TinyConstraints-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/TinyConstraints/TinyConstraints.modulemap";
+				PRODUCT_MODULE_NAME = TinyConstraints;
+				PRODUCT_NAME = TinyConstraints;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		55C9A3129383967F434010A10ADC69B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B049330E2D57D97FD953EF9D3A5EDD7 /* Pods-MireaAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MireaAppTests/Pods-MireaAppTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MireaAppTests/Pods-MireaAppTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6085E0D65F1EAB445E7849680B663DE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B26D23DB298B0A05ACB20A12C9D330F /* Pods-MireaApp-MireaAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MireaApp-MireaAppUITests/Pods-MireaApp-MireaAppUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MireaApp-MireaAppUITests/Pods-MireaApp-MireaAppUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		750230676C923D16D2BD871B573B1E59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C0D18392CC31AE499C16117095105C4 /* TinyConstraints.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TinyConstraints/TinyConstraints-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TinyConstraints/TinyConstraints-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/TinyConstraints/TinyConstraints.modulemap";
+				PRODUCT_MODULE_NAME = TinyConstraints;
+				PRODUCT_NAME = TinyConstraints;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9351621BD0685B52DFF833D6DAD554AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8231B685628857B347BBE518BDB79FDA /* Pods-MireaApp-MireaAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MireaApp-MireaAppUITests/Pods-MireaApp-MireaAppUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MireaApp-MireaAppUITests/Pods-MireaApp-MireaAppUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AFFCA5B1A5CDB07365429B0BD63E5537 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF2603B32EC810FBD59D7524CEBADE53 /* ActiveLabel.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ActiveLabel/ActiveLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ActiveLabel/ActiveLabel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ActiveLabel/ActiveLabel.modulemap";
+				PRODUCT_MODULE_NAME = ActiveLabel;
+				PRODUCT_NAME = ActiveLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B615F5D5836603B1EA7F670FE1E8CF42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7206A167B78A4E9A846C2960CD00627 /* ActiveLabel.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ActiveLabel/ActiveLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ActiveLabel/ActiveLabel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ActiveLabel/ActiveLabel.modulemap";
+				PRODUCT_MODULE_NAME = ActiveLabel;
+				PRODUCT_NAME = ActiveLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		054FD9F30A0B0DA9AF6D8F0823836FA5 /* Build configuration list for PBXNativeTarget "Pods-MireaAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55C9A3129383967F434010A10ADC69B0 /* Debug */,
+				1AEAAC05DC723DCE634AFF54299FB430 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06629A18CD34E1685199E9A3DBF4A183 /* Build configuration list for PBXNativeTarget "ActiveLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B615F5D5836603B1EA7F670FE1E8CF42 /* Debug */,
+				AFFCA5B1A5CDB07365429B0BD63E5537 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46D2B5FC59CB110678643C5B859803D0 /* Build configuration list for PBXNativeTarget "Pods-MireaApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B381E813D1841A6FE08544F3A0E9B6 /* Debug */,
+				2BA98CEFEB572295756FC83FB7691ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09909ECBA13E8F70A928465E7F7A9A92 /* Debug */,
+				2DE0D8898245310716431F92FA4989FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F43E649B3DFDF4EDDD9CE6E41BF19312 /* Build configuration list for PBXNativeTarget "Pods-MireaApp-MireaAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6085E0D65F1EAB445E7849680B663DE3 /* Debug */,
+				9351621BD0685B52DFF833D6DAD554AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F82ADE11EFCEC2B3A42D3D0BAB73E091 /* Build configuration list for PBXNativeTarget "TinyConstraints" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				750230676C923D16D2BD871B573B1E59 /* Debug */,
+				501B1AB6BD6781E5C49BB481501E221B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
