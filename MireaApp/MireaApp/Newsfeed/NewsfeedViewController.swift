@@ -124,6 +124,7 @@ extension NewsfeedViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: NewsfeedCell.reuseId, for: indexPath) as! NewsfeedCell
+        guard !feedViewModel.cells.isEmpty else {return cell}
         let cellViewModel = feedViewModel.cells[indexPath.row]
         cell.set(viewModel: cellViewModel)
         return cell

@@ -74,7 +74,7 @@ class NewsfeedCell: UITableViewCell {
     }
     
     func set(viewModel: FeedCellViewModel) {
-        postLabel.text = viewModel.name
+        postLabel.text = viewModel.name! + " #kek"
         
         guard let url = URL(string: viewModel.image!) else {return}
         postImageView.sd_setImage(with: url, completed: nil)
