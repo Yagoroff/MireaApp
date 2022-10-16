@@ -42,7 +42,7 @@ class CellViewController: UIViewController {
         label.numberOfLines = 0
         label.textAlignment = .center
         label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 20)
+        label.font = UIFont.systemFont(ofSize: 17)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     } ()

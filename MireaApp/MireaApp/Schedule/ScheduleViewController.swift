@@ -202,6 +202,7 @@ class ScheduleViewController: UIViewController, ScheduleDisplayLogic {
       view.backgroundColor = .white
       addSubviews()
       setPickers()
+      animateStaticItems()
       setCollection()
       makeConstraints()
       interactor?.makeRequest(request: .getTeachers)
@@ -220,6 +221,7 @@ class ScheduleViewController: UIViewController, ScheduleDisplayLogic {
               errorLable.isHidden = false
           }
           collectionViewForSchedule.reloadData()
+          animateCollectionView()
       case .presentScheduleOnWeek(schedule: let schedule):
           errorLable.isHidden = true
           self.scheduleWeekViewModel = schedule
@@ -228,6 +230,7 @@ class ScheduleViewController: UIViewController, ScheduleDisplayLogic {
               errorLable.isHidden = false
           }
           collectionViewForSchedule.reloadData()
+          animateCollectionView()
       }
   }
 }
@@ -327,6 +330,33 @@ extension ScheduleViewController {
             errorLable.centerYAnchor.constraint(equalTo: view.centerYAnchor),
         ])
     }
+    
+    private func animateStaticItems() {
+        for (index, view) in [buttonForSearchSchedule, findTeacherView,
+                             buttonForScheduleOnWeek, numberField, pickerNumberOfWeekView].enumerated() {
+            
+            var translationTransform = CATransform3DTranslate(CATransform3DIdentity, -300, 0, 0)
+            if index > 1 {
+                translationTransform = CATransform3DTranslate(CATransform3DIdentity, 300, 0, 0)
+            }
+            
+            view.layer.transform = translationTransform
+            view.layer.opacity = 0
+            
+            UIView.animate(withDuration: 1, delay: 0, options: .curveEaseInOut, animations: {
+                view.layer.opacity = 1
+                view.layer.transform = CATransform3DIdentity
+            })
+        }
+    }
+    
+    private func animateCollectionView() {
+        collectionViewForSchedule.layer.opacity = 0
+        
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseInOut, animations: {
+            self.collectionViewForSchedule.layer.opacity = 1
+        })
+    }
 }
 
 extension ScheduleViewController: UIPickerViewDelegate, UIPickerViewDataSource {
@@ -389,4 +419,16 @@ extension ScheduleViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 5)
     }
+    
+//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+//
+//        let translationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 0, 0)
+//        cell.layer.transform = translationTransform
+//        cell.layer.opacity = 0
+//
+//        UIView.animate(withDuration: 1.2, delay: 0.1 * Double(indexPath.row), options: .curveEaseInOut, animations: {
+//            cell.layer.opacity = 1
+//            cell.layer.transform = CATransform3DIdentity
+//        })
+//    }
 }
